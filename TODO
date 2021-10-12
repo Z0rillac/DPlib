@@ -1,9 +1,5 @@
-ceil
 gcd (for 2 numbers)
-factorial
 comb
-copysign
-floor
 isclose
 
 acos
