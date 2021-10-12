@@ -10,6 +10,7 @@ scoreboard objectives add DPlib.const dummy
 
 #numbers
 scoreboard players set -1 DPlib.const -1
+scoreboard players set 10 DPlib.const 10
 scoreboard players set 360 DPlib.const 360
 scoreboard players set 2^31-1 DPlib.const 2147483647
 scoreboard players set -2^31 DPlib.const -2147483648

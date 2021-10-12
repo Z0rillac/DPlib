@@ -5,9 +5,18 @@
 # Version: 1
 # namespace: DPlib
 
+#declare score_holder $in
+#declare score_holder $out
+#declare score_holder $min
+#declare score_holder $max
+#declare score_holder $number
+#declare score_holder $exponent
+#declare score_holder $scale
+
 #declare objective DPlib.const
 
 #declare score_holder -1
+#declare score_holder 10
 #declare score_holder 360
 #declare score_holder 2^31-1
 #declare score_holder -2^31
