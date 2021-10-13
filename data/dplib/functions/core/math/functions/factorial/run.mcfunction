@@ -1,4 +1,9 @@
-## Header 1
+# - Datapack Library -
+# By: Zorillac
+# MIT License
+#
+# Version: 1
+# namespace: DPlib
 
 execute if score $in DPlib.in matches 0 run scoreboard players set $out DPlib.out 1
 execute if score $in DPlib.in matches 1 run scoreboard players set $out DPlib.out 1

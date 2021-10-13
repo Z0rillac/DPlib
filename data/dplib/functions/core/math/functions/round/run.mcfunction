@@ -1,4 +1,9 @@
-## Header 1
+# - Datapack Library -
+# By: Zorillac
+# MIT License
+#
+# Version: 1
+# namespace: DPlib
 
 scoreboard players operation #a DPlib.temp = $in DPlib.in
 scoreboard players operation #b DPlib.temp = $in DPlib.in

@@ -6,6 +6,8 @@
 # namespace: DPlib
 
 #declare score_holder $in
+#declare score_holder $in1
+#declare score_holder $in2
 #declare score_holder $out
 #declare score_holder $min
 #declare score_holder $max

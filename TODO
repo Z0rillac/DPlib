@@ -1,7 +1,3 @@
-gcd (for 2 numbers)
-comb
-isclose
-
 acos
 asin
 atan
@@ -12,3 +8,4 @@ cosh
 sinh
 tanh
 
+isclose
