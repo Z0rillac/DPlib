@@ -4,7 +4,6 @@
 #
 # Version: 1
 # namespace: DPlib
-## random/main
 
 scoreboard objectives add DPlib.const dummy
 
