@@ -5,15 +5,15 @@
 # Version: 1
 # namespace: DPlib
 
-# Returns the tangent of $in degrees.
+# Returns the ceiling $in scaled to $scale.
 #
 # Input:
 #   $in = initial number
+#   $scale = the scale
 #
 # Output:
 #   $out = output
-#   $scale = the scale of $out
 #
-# Scale: 10000000
+# Scale: $scale
 
-function dplib:core/math/functions/tan/run
+function dplib:core/math/functions/ceil/run

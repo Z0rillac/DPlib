@@ -5,15 +5,14 @@
 # Version: 1
 # namespace: DPlib
 
-# Returns the tangent of $in degrees.
+# Returns x factorial.
 #
 # Input:
 #   $in = initial number
 #
 # Output:
 #   $out = output
-#   $scale = the scale of $out
 #
-# Scale: 10000000
+# Scale: 1
 
-function dplib:core/math/functions/tan/run
+function dplib:core/math/functions/factorial/run

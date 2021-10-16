@@ -5,13 +5,13 @@
 # Version: 1
 # namespace: DPlib
 
-# Returns the cube root of a number.
+# Returns the cube root of $in.
 #
 # Input:
 #   $in = initial number
 #
 # Output:
-#   $out = the cube root of the inital number
+#   $out = output
 #
 # Scale: 1
 

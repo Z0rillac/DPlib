@@ -5,15 +5,15 @@
 # Version: 1
 # namespace: DPlib
 
-# Returns $number raised to the power $exponent.
+# Returns the magnitude (absolute value) of $number but the sign of $source.
 #
 # Input:
-#   $exponent = exponent
 #   $number = initial number
+#   $source = sign source
 #
 # Output:
 #   $out = output
 #
 # Scale: 1
 
-function dplib:core/math/functions/cos/run
+function dplib:core/math/functions/copysign/run

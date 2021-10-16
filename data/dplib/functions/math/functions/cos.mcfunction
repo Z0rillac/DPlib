@@ -5,13 +5,14 @@
 # Version: 1
 # namespace: DPlib
 
-# Returns the cosinus of a number in degrees.
+# Returns the cosinus of $in degrees.
 #
 # Input:
 #   $in = initial number
 #
 # Output:
-#   $out = cosinus of the inital number
+#   $out = output
+#   $scale = the scale of $out
 #
 # Scale: 1000000000
 

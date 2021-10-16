@@ -5,14 +5,13 @@
 # Version: 1
 # namespace: DPlib
 
-# Returns the square root of $in.
+# Returns a random number between -2147483648 and 2147483647
 #
 # Input:
-#   $in = initial number
 #
 # Output:
 #   $out = output
 #
 # Scale: 1
 
-function dplib:core/math/functions/sqrt/run
+function dplib:core/math/tools/random/run
