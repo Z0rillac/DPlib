@@ -3,15 +3,15 @@
 # MIT License
 #
 # Version: 1
-# namespace: DPlib
+# namespace: dplib
 
-scoreboard players operation #a DPlib.temp = $in DPlib.in
-scoreboard players operation #b DPlib.temp = $in DPlib.in
-scoreboard players operation #c DPlib.temp = $scale DPlib.in
-scoreboard players operation #c DPlib.temp /= 10 DPlib.const
-scoreboard players operation #a DPlib.temp /= $scale DPlib.in
-scoreboard players operation #b DPlib.temp /= #c DPlib.temp
-scoreboard players operation #b DPlib.temp %= 10 DPlib.const
-execute if score #b DPlib.temp matches 1.. run scoreboard players add #a DPlib.temp 1
-scoreboard players operation #a DPlib.temp *= $scale DPlib.in
-scoreboard players operation $out DPlib.out = #a DPlib.temp
+scoreboard players operation #a dplib.temp = $in dplib.in
+scoreboard players operation #b dplib.temp = $in dplib.in
+scoreboard players operation #c dplib.temp = $scale dplib.in
+scoreboard players operation #c dplib.temp /= 10 dplib.const
+scoreboard players operation #a dplib.temp /= $scale dplib.in
+scoreboard players operation #b dplib.temp /= #c dplib.temp
+scoreboard players operation #b dplib.temp %= 10 dplib.const
+execute if score #b dplib.temp matches 1.. run scoreboard players add #a dplib.temp 1
+scoreboard players operation #a dplib.temp *= $scale dplib.in
+scoreboard players operation $out dplib.out = #a dplib.temp

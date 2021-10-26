@@ -3,9 +3,9 @@
 # MIT License
 #
 # Version: 1
-# namespace: DPlib
+# namespace: dplib
 
-scoreboard players operation #a DPlib.temp = $in DPlib.in
-scoreboard players operation #a DPlib.temp /= $scale DPlib.in
-scoreboard players operation #a DPlib.temp *= $scale DPlib.in
-scoreboard players operation $out DPlib.out = #a DPlib.temp
+scoreboard players operation #a dplib.temp = $in dplib.in
+scoreboard players operation #a dplib.temp /= $scale dplib.in
+scoreboard players operation #a dplib.temp *= $scale dplib.in
+scoreboard players operation $out dplib.out = #a dplib.temp

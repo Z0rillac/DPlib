@@ -3,7 +3,7 @@
 # MIT License
 #
 # Version: 1
-# namespace: DPlib
+# namespace: dplib
 
 # Returns the greatest common divisor of the $in1 and $in2.
 #

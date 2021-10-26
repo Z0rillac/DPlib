@@ -3,10 +3,10 @@
 # MIT License
 #
 # Version: 1
-# namespace: DPlib
+# namespace: dplib
 
-scoreboard players operation #s DPlib.temp -= #n DPlib.temp
-scoreboard players operation #n DPlib.temp += #m DPlib.temp
-scoreboard players add #m DPlib.temp 6
-scoreboard players add #r DPlib.temp 1
-execute if score #s DPlib.temp > #n DPlib.temp run function dplib:core/math/functions/cbrt/loop
+scoreboard players operation #s dplib.temp -= #n dplib.temp
+scoreboard players operation #n dplib.temp += #m dplib.temp
+scoreboard players add #m dplib.temp 6
+scoreboard players add #r dplib.temp 1
+execute if score #s dplib.temp > #n dplib.temp run function dplib:core/math/functions/cbrt/loop

@@ -3,9 +3,9 @@
 # MIT License
 #
 # Version: 1
-# namespace: DPlib
+# namespace: dplib
 
-scoreboard objectives remove DPlib.temp
-scoreboard objectives remove DPlib.in
-scoreboard objectives remove DPlib.out
-scoreboard objectives remove DPlib.const
+scoreboard objectives remove dplib.temp
+scoreboard objectives remove dplib.in
+scoreboard objectives remove dplib.out
+scoreboard objectives remove dplib.const

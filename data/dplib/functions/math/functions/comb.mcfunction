@@ -3,7 +3,7 @@
 # MIT License
 #
 # Version: 1
-# namespace: DPlib
+# namespace: dplib
 
 # Returns the number of ways to choose $in2 items from $in1 items without repetition and without order.
 #

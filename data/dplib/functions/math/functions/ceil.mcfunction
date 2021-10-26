@@ -3,7 +3,7 @@
 # MIT License
 #
 # Version: 1
-# namespace: DPlib
+# namespace: dplib
 
 # Returns the ceiling $in scaled to $scale.
 #

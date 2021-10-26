@@ -3,9 +3,9 @@
 # MIT License
 #
 # Version: 1
-# namespace: DPlib
+# namespace: dplib
 
-scoreboard objectives add DPlib.temp dummy
-scoreboard objectives add DPlib.in dummy
-scoreboard objectives add DPlib.out dummy
+scoreboard objectives add dplib.temp dummy
+scoreboard objectives add dplib.in dummy
+scoreboard objectives add dplib.out dummy
 function dplib:core/math/const/load

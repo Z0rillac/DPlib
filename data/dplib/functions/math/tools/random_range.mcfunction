@@ -3,7 +3,7 @@
 # MIT License
 #
 # Version: 1
-# namespace: DPlib
+# namespace: dplib
 
 # Returns a random number between $min and $max.
 #

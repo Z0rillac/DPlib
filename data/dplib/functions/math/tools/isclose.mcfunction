@@ -3,7 +3,7 @@
 # MIT License
 #
 # Version: 1
-# namespace: DPlib
+# namespace: dplib
 
 # Returns 1 if the values $in1 and $in2 are close to each other and 0 otherwise.
 # Whether or not two values are considered close is determined according to given tolerance.

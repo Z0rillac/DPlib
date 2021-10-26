@@ -3,7 +3,7 @@
 # MIT License
 #
 # Version: 1
-# namespace: DPlib
+# namespace: dplib
 
 #declare score_holder $in
 #declare score_holder $in1
@@ -15,7 +15,7 @@
 #declare score_holder $exponent
 #declare score_holder $scale
 
-#declare objective DPlib.const
+#declare objective dplib.const
 
 #declare score_holder -1
 #declare score_holder 10

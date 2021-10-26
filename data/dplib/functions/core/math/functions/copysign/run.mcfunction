@@ -3,8 +3,8 @@
 # MIT License
 #
 # Version: 1
-# namespace: DPlib
+# namespace: dplib
 
-scoreboard players operation $out DPlib.out = $number DPlib.in
-execute if score $number DPlib.in matches ..-1 run scoreboard players operation $out DPlib.out *= -1 DPlib.const
-execute if score $source DPlib.in matches ..-1 run scoreboard players operation $out DPlib.out *= -1 DPlib.const
+scoreboard players operation $out dplib.out = $number dplib.in
+execute if score $number dplib.in matches ..-1 run scoreboard players operation $out dplib.out *= -1 dplib.const
+execute if score $source dplib.in matches ..-1 run scoreboard players operation $out dplib.out *= -1 dplib.const

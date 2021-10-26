@@ -3,13 +3,13 @@
 # MIT License
 #
 # Version: 1
-# namespace: DPlib
+# namespace: dplib
 
-scoreboard players set #r DPlib.temp 0
-scoreboard players set #n DPlib.temp 1
-scoreboard players set #m DPlib.temp 6
-scoreboard players operation #s DPlib.temp = $in DPlib.in
+scoreboard players set #r dplib.temp 0
+scoreboard players set #n dplib.temp 1
+scoreboard players set #m dplib.temp 6
+scoreboard players operation #s dplib.temp = $in dplib.in
 function dplib:core/math/functions/cbrt/loop
-scoreboard players operation #s DPlib.temp /= #n DPlib.temp
-scoreboard players operation #r DPlib.temp += #s DPlib.temp
-scoreboard players operation $out DPlib.out = #r DPlib.temp
+scoreboard players operation #s dplib.temp /= #n dplib.temp
+scoreboard players operation #r dplib.temp += #s dplib.temp
+scoreboard players operation $out dplib.out = #r dplib.temp
