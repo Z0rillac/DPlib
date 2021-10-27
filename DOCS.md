@@ -38,51 +38,84 @@ https://github.com/Z0rillac/DPlib
 
 ## Index
 ### Math
-[functions/**ceil**](#functionsceil)
+[functions/**ceil**](#mathfunctionsceil)
 
-[functions/**comb**]()
+[functions/**comb**](#mathfunctionscomb)
 
-[functions/**copysign**]()
+[functions/**copysign**](#mathfunctionscopysign)
 
-[functions/**fabs**]()
+[functions/**fabs**](#mathfunctionsfabs)
 
-[functions/**factorial**]()
+[functions/**factorial**](#mathfunctionsfactorial)
 
-[functions/**floor**]()
+[functions/**floor**](#mathfunctionsfloor)
 
-[functions/**gcd**]()
+[functions/**gcd**](#mathfunctionsgcd)
 
-[functions/**pow**]()
+[functions/**pow**](#mathfunctionspow)
 
-[functions/**sqrt**]()
+[functions/**sqrt**](#mathfunctionssqrt)
 
-[functions/**cbrt**]()
+[functions/**cbrt**](#mathfunctionscbrt)
 
-[functions/**cos**]()
+[functions/**cos**](#mathfunctionscos)
 
-[functions/**sin**]()
+[functions/**sin**](#mathfunctionssin)
 
-[functions/**tan**]()
+[functions/**tan**](#mathfunctionstan)
 
-[tools/**distance**]()
+[tools/**distance**](#mathtoolsdistance)
 
-[tools/**isclose**]()
+[tools/**isclose**](#mathtoolsisclose)
 
-[tools/**random_binary**]()
+[tools/**random_binary**](#mathtoolsrandombinary)
 
-[tools/**random_range**]()
+[tools/**random_range**](#mathtoolsrandomrange)
 
-[tools/**random**]()
+[tools/**random**](#mathtoolsrandom)
 
-### functions/**ceil**
+### math/functions/ceil
 
 Returns the ceiling of `$in` scaled to `$scale`.
+```
+Input:
+    $in = initial number
+    $scale = the scale
+Output:
+    $out = output
+Scale: $scale
+```
 
->Input:
->\$in = initial number
->\$scale = the scale
->Output:
->\$out = output
->Scale: \$scale
+### math/functions/comb
 
-funcitons/**comb**
+### math/functions/copysign
+
+### math/functions/fabs
+
+### math/functions/factorial
+
+### math/functions/floor
+
+### math/functions/gcd
+
+### math/functions/pow
+
+### math/functions/sqrt
+
+### math/functions/cbrt
+
+### math/functions/cos
+
+### math/functions/sin
+
+### math/functions/tan
+
+### math/tools/distance
+
+### math/tools/isclose
+
+### math/tools/random_binary
+
+### math/tools/random_range
+
+### math/tools/random
