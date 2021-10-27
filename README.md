@@ -25,7 +25,7 @@ function dplib:math/tools/random_range
 This library is made to be used with [Data-pack Helper Plus](https://marketplace.visualstudio.com/items?itemName=SPGoding.datapack-language-server) extension, it is easier to find the functions thanks to the auto completion provided by the extension and a library of aliases.
 ## Math
 ### Functions
-[functions/**ceil**](#functions/**ceil**)
+[functions/**ceil**](#functionsceil)
 [functions/**comb**]()
 
 [functions/**copysign**]()
