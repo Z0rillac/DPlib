@@ -29,3 +29,9 @@ title Someone actionbar [{"text":"Nearest Cow : ","color":"red"},{"score":{"name
 This library is made to be used with [Data-pack Helper Plus](https://marketplace.visualstudio.com/items?itemName=SPGoding.datapack-language-server) extension, it is easier to find the functions thanks to the auto completion provided by the extension and a library of aliases.
 
 The complete documentation can be found [here.](https://github.com/Z0rillac/DPlib/blob/main/DOCS.md)
+
+It is advisable to credit the project
+```
+This datapack depends on  DPlib by Zorillac
+https://github.com/Z0rillac/DPlib
+```
