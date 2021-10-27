@@ -68,9 +68,9 @@ https://github.com/Z0rillac/DPlib
 
 [tools/**isclose**](#mathtoolsisclose)
 
-[tools/**random_binary**](#mathtoolsrandombinary)
+[tools/**random_binary**](#mathtoolsrandom_binary)
 
-[tools/**random_range**](#mathtoolsrandomrange)
+[tools/**random_range**](#mathtoolsrandom_range)
 
 [tools/**random**](#mathtoolsrandom)
 
