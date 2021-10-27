@@ -215,7 +215,8 @@ Scale: 10000000
 
 ### math/tools/distance
 Returns the 3D distance between two point.
-```Input:
+```
+Input:
     $x1 = X position of the first point
     $y1 = Y position of the first point 
     $z1 = Z position of the first point
