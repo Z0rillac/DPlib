@@ -24,7 +24,7 @@ function dplib:math/tools/random_range
 
 This library is made to be used with [Data-pack Helper Plus](https://marketplace.visualstudio.com/items?itemName=SPGoding.datapack-language-server) extension, it is easier to find the functions thanks to the auto completion provided by the extension and a library of aliases.
 
-```js
+```java
 execute as Someone store result score $x1 dplib.in run data get entity @s Pos[0]
 execute as Someone store result score $y1 dplib.in run data get entity @s Pos[1]
 execute as Someone store result score $z1 dplib.in run data get entity @s Pos[2]
