@@ -12,17 +12,28 @@ To set the returned value to the right scale, you have to divide it by `$scale`.
 
 Functions can be called like this:
 
-```
+```mcfunction
 function dplib:<function domain>/<potential sub-domain>/<function name>
 ```
 Example:
-```
+```mcfunction
 function dplib:math/functions/sqrt
 function dplib:math/tools/random_range
 ```
 `dplib:core/` is used internally.
 
 This library is made to be used with [Data-pack Helper Plus](https://marketplace.visualstudio.com/items?itemName=SPGoding.datapack-language-server) extension, it is easier to find the functions thanks to the auto completion provided by the extension and a library of aliases.
+
+```mcfunction
+execute as Someone store result score $x1 dplib.in run data get entity @s Pos[0]
+execute as Someone store result score $y1 dplib.in run data get entity @s Pos[1]
+execute as Someone store result score $z1 dplib.in run data get entity @s Pos[2]
+execute at Someone as @e[sort=nearest,type=cow,limit=1] store result score $x2 dplib.in run data get entity @s Pos[0]
+execute at Someone as @e[sort=nearest,type=cow,limit=1] store result score $y2 dplib.in run data get entity @s Pos[1]
+execute at Someone as @e[sort=nearest,type=cow,limit=1] store result score $z2 dplib.in run data get entity @s Pos[2]
+function dplib:core/math/tools/distance/run
+title Someone actionbar [{"text":"Nearest Cow : ","color":"red"},{"score":{"name":"$out","objective":"dplib.out"},"color":"yellow"},{"text":"m","color":"yellow"}]
+```
 ## Index
 ### Math
 [functions/**ceil**](#functionsceil)
