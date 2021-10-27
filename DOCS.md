@@ -17,23 +17,25 @@ function dplib:<function domain>/<potential sub-domain>/<function name>
 ```
 Example:
 ```mcfunction
+## This example returns the square root of a random number
+
+# Generates a random number
+function dplib:math/tools/random
+# Put the random number as parameter $in
+scoreboard players operation $out dplib.out = $in dplib.in
+# Return the square root
 function dplib:math/functions/sqrt
-function dplib:math/tools/random_range
 ```
 `dplib:core/` is used internally.
 
 This library is made to be used with [Data-pack Helper Plus](https://marketplace.visualstudio.com/items?itemName=SPGoding.datapack-language-server) extension, it is easier to find the functions thanks to the auto completion provided by the extension and a library of aliases.
 
-```mcfunction
-execute as Someone store result score $x1 dplib.in run data get entity @s Pos[0]
-execute as Someone store result score $y1 dplib.in run data get entity @s Pos[1]
-execute as Someone store result score $z1 dplib.in run data get entity @s Pos[2]
-execute at Someone as @e[sort=nearest,type=cow,limit=1] store result score $x2 dplib.in run data get entity @s Pos[0]
-execute at Someone as @e[sort=nearest,type=cow,limit=1] store result score $y2 dplib.in run data get entity @s Pos[1]
-execute at Someone as @e[sort=nearest,type=cow,limit=1] store result score $z2 dplib.in run data get entity @s Pos[2]
-function dplib:core/math/tools/distance/run
-title Someone actionbar [{"text":"Nearest Cow : ","color":"red"},{"score":{"name":"$out","objective":"dplib.out"},"color":"yellow"},{"text":"m","color":"yellow"}]
+It is advisable to credit the project :
 ```
+This datapack depends on  DPlib by Zorillac
+https://github.com/Z0rillac/DPlib
+```
+
 ## Index
 ### Math
 [functions/**ceil**](#functionsceil)
