@@ -5,7 +5,7 @@
 # Version: 1
 # namespace: dplib
 
-# Returns x factorial.
+# Returns $in factorial.
 #
 # Input:
 #   $in = initial number
