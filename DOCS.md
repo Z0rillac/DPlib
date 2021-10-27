@@ -8,6 +8,7 @@ The scoreboard `dplib.temp` is and can be used to save values temporarily to per
 Mathematical constants are found in the scoreboard `dplib.const`.
 
 Some values can be returned at a certain scale specified by the `$scale` value returned by the function.
+
 To set the returned value to the right scale, you have to divide it by `$scale`. This allows to return floating numbers. Only some functions can return this value, so you have to be careful not to scale the result of a function to the scale of another function.
 
 Functions can be called like this:
@@ -24,43 +25,7 @@ function dplib:math/tools/random_range
 
 This library is made to be used with [Data-pack Helper Plus](https://marketplace.visualstudio.com/items?itemName=SPGoding.datapack-language-server) extension, it is easier to find the functions thanks to the auto completion provided by the extension and a library of aliases.
 ## Math
-### Functions
-[functions/**ceil**](#functions/**ceil**)
-[functions/**comb**]()
-
-[functions/**copysign**]()
-
-[functions/**fabs**]()
-
-[functions/**factorial**]()
-
-[functions/**floor**]()
-
-[functions/**gcd**]()
-
-[functions/**pow**]()
-
-[functions/**sqrt**]()
-
-[functions/**cbrt**]()
-
-[functions/**cos**]()
-
-[functions/**sin**]()
-
-[functions/**tan**]()
-
-[tools/**distance**]()
-
-[tools/**isclose**]()
-
-[tools/**random_binary**]()
-
-[tools/**random_range**]()
-
-[tools/**random**]()
-
-### functions/**ceil**
+functions/**ceil**
 
 Returns the ceiling of `$in` scaled to `$scale`.
 
