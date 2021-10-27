@@ -12,11 +12,11 @@ To set the returned value to the right scale, you have to divide it by `$scale`.
 
 Functions can be called like this:
 
-```
+```mcfunction
 function dplib:<function domain>/<potential sub-domain>/<function name>
 ```
 Example:
-```
+```mcfunction
 function dplib:math/functions/sqrt
 function dplib:math/tools/random_range
 ```
