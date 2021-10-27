@@ -22,7 +22,7 @@ Example:
 # Generates a random number
 function dplib:math/tools/random
 # Put the random number as parameter $in
-scoreboard players operation $out $in dplib.in = dplib.out
+scoreboard players operation $in dplib.in = $out dplib.out
 # Return the square root
 function dplib:math/functions/sqrt
 ```
