@@ -228,7 +228,7 @@ Scale: 1
 ```
 
 ### math/tools/isclose
-Returns 1 if the values `$in1` and `$in2` are close to each other and 0 otherwise.
+Returns `1` if the values `$in1` and `$in2` are close to each other and 0 otherwise.
 Whether or not two values are considered close is determined according to given tolerance.
 ```
 Input:
@@ -240,7 +240,7 @@ Output:
 ```
 
 ### math/tools/random_binary
-Returns 1 or 0 randomly.
+Returns `1` or `0` randomly.
 Can be replaced by :
 ```mcfunction
 execute if predicate dplib:random_binary run ...
@@ -268,6 +268,6 @@ Returns a random number between `-2147483648` and `2147483647`
 ```
 Input:
 Output:
-$out = output
+    $out = output
 Scale: 1
 ```
