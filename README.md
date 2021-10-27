@@ -12,13 +12,17 @@ The input and output values are in `dplib.in` and `dplib.out`, then you just hav
 
 For example, you can calculate how far away the nearest cow is:
 ```mcfunction
+# Puts the player's coordinates in parameters of the function
 execute as Someone store result score $x1 dplib.in run data get entity @s Pos[0]
 execute as Someone store result score $y1 dplib.in run data get entity @s Pos[1]
 execute as Someone store result score $z1 dplib.in run data get entity @s Pos[2]
+# Puts the nearest cow coordinates in parameters of the function
 execute at Someone as @e[sort=nearest,type=cow,limit=1] store result score $x2 dplib.in run data get entity @s Pos[0]
 execute at Someone as @e[sort=nearest,type=cow,limit=1] store result score $y2 dplib.in run data get entity @s Pos[1]
 execute at Someone as @e[sort=nearest,type=cow,limit=1] store result score $z2 dplib.in run data get entity @s Pos[2]
+# Calculates the distance using a tool provided by this library
 function dplib:core/math/tools/distance/run
+# Displays the result above the player's hotbar
 title Someone actionbar [{"text":"Nearest Cow : ","color":"red"},{"score":{"name":"$out","objective":"dplib.out"},"color":"yellow"},{"text":"m","color":"yellow"}]
 ```
 
