@@ -21,7 +21,7 @@ execute at Someone as @e[sort=nearest,type=cow,limit=1] store result score $x2 d
 execute at Someone as @e[sort=nearest,type=cow,limit=1] store result score $y2 dplib.in run data get entity @s Pos[1]
 execute at Someone as @e[sort=nearest,type=cow,limit=1] store result score $z2 dplib.in run data get entity @s Pos[2]
 # Calculates the distance using a tool provided by this library
-function dplib:core/math/tools/distance/run
+function dplib:math/tools/distance
 # Displays the result above the player's hotbar
 title Someone actionbar [{"text":"Nearest Cow : ","color":"red"},{"score":{"name":"$out","objective":"dplib.out"},"color":"yellow"},{"text":"m","color":"yellow"}]
 ```
