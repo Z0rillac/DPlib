@@ -12,7 +12,7 @@ To set the returned value to the right scale, you have to divide it by `$scale`.
 
 Functions can be called like this:
 
-```mcfunction
+```mcfunction
 function dplib:<function domain>/<potential sub-domain>/<function name>
 ```
 Example:
@@ -63,6 +63,12 @@ https://github.com/Z0rillac/DPlib
 [functions/**sin**](#mathfunctionssin)
 
 [functions/**tan**](#mathfunctionstan)
+
+[functions/**fcos**](#mathfunctionsfcos)
+
+[functions/**fsin**](#mathfunctionsfsin)
+
+[functions/**ftan**](#mathfunctionsftan)
 
 [tools/**distance**](#mathtoolsdistance)
 
@@ -204,6 +210,42 @@ Scale: 1000000000
 
 ### math/functions/tan
 Returns the tangent of `$in` degrees.
+```
+Input:
+    $in = initial number
+Output:
+    $out = output
+    $scale = the scale of $out
+Scale: 10000000
+```
+
+### math/functions/fcos
+Returns an approximation of cos(`$in`) calculated with Bhaskara I's approximation method. This function is 5 to 6 times faster than cos() but has a maximum error of 0.0016 (This is largely negligible, honestly, you should definitely use this function in the original).
+```
+Input:
+    $in = initial number
+Output:
+    $out = output
+    $scale = the scale of $out
+Scale: 1000000000
+```
+
+### math/functions/fsin
+Returns an approximation of sin(`$in`) calculated with Bhaskara I's approximation method. This function is 5 to 6 times faster than sin() but has a maximum error of 0.0016 (This is largely negligible, honestly, you should definitely use this function in the original).
+```
+Input:
+    $in = initial number
+Output:
+    $out = output
+    $scale = the scale of $out
+Scale: 1000000000
+```
+
+### math/functions/ftan
+Returns an approximation of tan(`$in`) calculated with Bhaskara I's approximation method. This function is 5 to 6 times faster than tan() but has a maximum error of 0.0016 (This is largely negligible, honestly, you should definitely use this function in the original).
+
+WIP, this function does not work.
+
 ```
 Input:
     $in = initial number
