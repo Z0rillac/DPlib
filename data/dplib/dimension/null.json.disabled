@@ -1,0 +1,34 @@
+{
+    "type": {
+      "name": "dplib:null",
+      "ultrawarm": false,
+      "natural": false,
+      "piglin_safe": true,
+      "respawn_anchor_works": false,
+      "bed_works": false,
+      "has_raids": false,
+      "has_skylight": false,
+      "has_ceiling": false,
+      "coordinate_scale": 30000000,
+      "ambient_light": 0,
+      "fixed_time": 0,
+      "logical_height": 0,
+      "effects": "minecraft:overworld",
+      "infiniburn": "minecraft:infiniburn_overworld",
+      "min_y": 0,
+      "height": 16
+    },
+    "generator": {
+      "type": "minecraft:flat",
+      "settings": {
+        "biome": "minecraft:plains",
+        "lakes": false,
+        "features": false,
+        "layers": [],
+        "structures": {
+          "structures": {}
+        }
+      }
+    }
+  }
+  

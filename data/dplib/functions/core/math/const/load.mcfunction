@@ -8,8 +8,30 @@
 scoreboard objectives add dplib.const dummy
 
 #numbers
+scoreboard players set -1000000000 dplib.const -1000000000
+scoreboard players set -100000000 dplib.const -100000000
+scoreboard players set -10000000 dplib.const -10000000
+scoreboard players set -1000000 dplib.const -1000000
+scoreboard players set -100000 dplib.const -100000
+scoreboard players set -10000 dplib.const -10000
+scoreboard players set -1000 dplib.const -1000
+scoreboard players set -100 dplib.const -100
+scoreboard players set -10 dplib.const -10
 scoreboard players set -1 dplib.const -1
+scoreboard players set 0 dplib.const 0
+scoreboard players set 1 dplib.const 1
 scoreboard players set 10 dplib.const 10
+scoreboard players set 100 dplib.const 100
+scoreboard players set 1000 dplib.const 1000
+scoreboard players set 10000 dplib.const 10000
+scoreboard players set 100000 dplib.const 100000
+scoreboard players set 1000000 dplib.const 1000000
+scoreboard players set 10000000 dplib.const 10000000
+scoreboard players set 100000000 dplib.const 100000000
+scoreboard players set 1000000000 dplib.const 1000000000
+scoreboard players set 40000 dplib.const 40000
+scoreboard players set 40500 dplib.const 40500
+scoreboard players set 180 dplib.const 180
 scoreboard players set 360 dplib.const 360
 scoreboard players set 2^31-1 dplib.const 2147483647
 scoreboard players set -2^31 dplib.const -2147483648
