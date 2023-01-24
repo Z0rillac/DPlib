@@ -49,3 +49,5 @@
 #declare score_holder e
 
 #declare score_holder 2^<0..30>
+
+#alias entity cwe.sid.target @e[tag=dplib.sid.target,limit=1]

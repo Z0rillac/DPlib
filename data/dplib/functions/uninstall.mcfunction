@@ -10,3 +10,7 @@ scoreboard objectives remove dplib.in
 scoreboard objectives remove dplib.out
 scoreboard objectives remove dplib.const
 scoreboard objectives remove dplib.time
+
+scoreboard objectives remove cwe.sid
+scoreboard objectives remove cwe.sid.limbs
+scoreboard objectives remove cwe.sid.head

@@ -1,0 +1,11 @@
+{
+    "criteria": {
+      "tick": {
+        "trigger": "minecraft:tick"
+      }
+    },
+    "rewards": {
+      "function": "dplib:core/player_setup"
+    }
+  }
+  
