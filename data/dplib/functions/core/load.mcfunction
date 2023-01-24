@@ -21,3 +21,5 @@ scoreboard players set tps_scale dplib.time 1000
 scoreboard players set #tick dplib.time 0
 
 function dplib:core/sid/load
+
+scoreboard objectives add dplib.benchmark dummy
