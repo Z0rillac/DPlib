@@ -64,12 +64,6 @@ https://github.com/Z0rillac/DPlib
 
 [functions/**tan**](#mathfunctionstan)
 
-[functions/**fcos**](#mathfunctionsfcos)
-
-[functions/**fsin**](#mathfunctionsfsin)
-
-[functions/**ftan**](#mathfunctionsftan)
-
 [tools/**distance**](#mathtoolsdistance)
 
 [tools/**isclose**](#mathtoolsisclose)
@@ -210,42 +204,6 @@ Scale: 1000000000
 
 ### math/functions/tan
 Returns the tangent of `$in` degrees.
-```
-Input:
-    $in = initial number
-Output:
-    $out = output
-    $scale = the scale of $out
-Scale: 10000000
-```
-
-### math/functions/fcos
-Returns an approximation of cos(`$in`) calculated with Bhaskara I's approximation method. This function is 5 to 6 times faster than cos() but has a maximum error of 0.0016 (This is largely negligible, honestly, you should definitely use this function in the original).
-```
-Input:
-    $in = initial number
-Output:
-    $out = output
-    $scale = the scale of $out
-Scale: 1000000000
-```
-
-### math/functions/fsin
-Returns an approximation of sin(`$in`) calculated with Bhaskara I's approximation method. This function is 5 to 6 times faster than sin() but has a maximum error of 0.0016 (This is largely negligible, honestly, you should definitely use this function in the original).
-```
-Input:
-    $in = initial number
-Output:
-    $out = output
-    $scale = the scale of $out
-Scale: 1000000000
-```
-
-### math/functions/ftan
-Returns an approximation of tan(`$in`) calculated with Bhaskara I's approximation method. This function is 5 to 6 times faster than tan() but has a maximum error of 0.0016 (This is largely negligible, honestly, you should definitely use this function in the original).
-
-WIP, this function does not work.
-
 ```
 Input:
     $in = initial number
