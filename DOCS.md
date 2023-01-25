@@ -307,7 +307,7 @@ kill @e[tag=guns,predicate=dplib:sid/linked_to_limbs]
 ```
 
 ### sid/linked_to_head
-Predicate to select all members of the "head" entity
+Predicate to select all limbs of the "head" entity
 ```mcfunction
 # Sets the target SID to the head of the current limbs (the seat of the ship)
 scoreboard players operation search dplib.sid = @s[tag=seat] dplib.sid.limbs
