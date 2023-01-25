@@ -1,3 +1,7 @@
+## Datapack Library v1.2
+## MIT License
+## Copyright (c) 2023 Z0rillac
+
 def sqrt(number):
     if number < 362:
         root = 0

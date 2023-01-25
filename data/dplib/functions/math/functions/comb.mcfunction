@@ -1,9 +1,6 @@
-# - Datapack Library -
-# By: Zorillac
-# MIT License
-#
-# Version: 1
-# namespace: dplib
+## Datapack Library v1.2
+## MIT License
+## Copyright (c) 2023 Z0rillac
 
 # Returns the number of ways to choose $in2 items from $in1 items without repetition and without order.
 #

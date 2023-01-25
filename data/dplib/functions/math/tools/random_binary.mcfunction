@@ -1,9 +1,6 @@
-# - Datapack Library -
-# By: Zorillac
-# MIT License
-#
-# Version: 1
-# namespace: dplib
+## Datapack Library v1.2
+## MIT License
+## Copyright (c) 2023 Z0rillac
 
 # Returns 1 or 0 randomly.
 # Can be replaced by /execute if predicate dplib:random_binary run ...

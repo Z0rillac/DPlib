@@ -1,9 +1,6 @@
-# - Datapack Library -
-# By: Zorillac
-# MIT License
-#
-# Version: 1
-# namespace: dplib
+## Datapack Library v1.2
+## MIT License
+## Copyright (c) 2023 Z0rillac
 
 # Here, we prefer to use an array of data, 
 # because the calculation, although largely 

@@ -1,9 +1,6 @@
-# - Datapack Library -
-# By: Zorillac
-# MIT License
-#
-# Version: 1
-# namespace: dplib
+## Datapack Library v1.2
+## MIT License
+## Copyright (c) 2023 Z0rillac
 
 execute if score $in dplib.in matches 0 run scoreboard players set $out dplib.out 1
 execute if score $in dplib.in matches 1 run scoreboard players set $out dplib.out 1

@@ -1,9 +1,6 @@
-# - Datapack Library -
-# By: Zorillac
-# MIT License
-#
-# Version: 1
-# namespace: dplib
+## Datapack Library v1.2
+## MIT License
+## Copyright (c) 2023 Z0rillac
 
 scoreboard players operation #r dplib.temp *= #n dplib.temp
 scoreboard players remove #e dplib.temp 1

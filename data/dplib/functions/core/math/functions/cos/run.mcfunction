@@ -1,9 +1,7 @@
-##
- # run.mcfunction
- # 
- #
- # Created by Zorillac.
-##
+## Datapack Library v1.2
+## MIT License
+## Copyright (c) 2023 Z0rillac
+
 #(40000x(180-x))/(40500-x(180-x))*100000
 
 scoreboard players operation #x dplib.temp = $in dplib.in
