@@ -19,5 +19,6 @@ scoreboard players set #tick dplib.time 0
 
 function dplib:core/sid/load
 function dplib:core/thread/load
+function dplib:thread/ids
 
 scoreboard objectives add dplib.benchmark dummy

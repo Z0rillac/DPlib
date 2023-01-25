@@ -10,3 +10,5 @@
 
 #function dplib:core/time/real_time/tick 
 # Will modify world border on minecraft 1.18 + if enabled because of MC-246429
+
+function dplib:core/thread/run_threads
