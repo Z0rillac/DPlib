@@ -82,9 +82,9 @@ https://github.com/Z0rillac/DPlib
 
 ### Scoreboard ID (SID)
 
-[(predicate) sid/**linked_to_head**]()
+[(predicate) sid/**linked_to_head**](#sidlinked_to_head)
 
-[(predicate) sid/**linked_to_limbs**]()
+[(predicate) sid/**linked_to_limbs**](#sidlinked_to_limbs)
 
 ### math/functions/ceil
 Returns the ceiling of `$in` scaled to `$scale`.
@@ -297,8 +297,8 @@ Kills the current used thread.
 
 ```
 
-### sid/linked_to_head
-Creates a new thread.
+### sid/linked_to_limbs
+Predicate to select the "head" entity from one of his limbs.
 ```mcfunction
 # Sets the target SID to the one of the nearest ship
 scoreboard players operation search dplib.sid = @e[tag=ship,sort=nearest,limit=1] dplib.sid.head
@@ -306,8 +306,8 @@ scoreboard players operation search dplib.sid = @e[tag=ship,sort=nearest,limit=1
 kill @e[tag=guns,predicate=dplib:sid/linked_to_limbs]
 ```
 
-### thread/linked_to_limbs
-Kills the current used thread.
+### sid/linked_to_head
+Predicate to select all members of the "head" entity
 ```mcfunction
 # Sets the target SID to the head of the current limbs (the seat of the ship)
 scoreboard players operation search dplib.sid = @s[tag=seat] dplib.sid.limbs
