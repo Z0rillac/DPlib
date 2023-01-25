@@ -302,7 +302,7 @@ Predicate to select all limbs of the "head" entity
 ```mcfunction
 # Sets the target SID to the one of the nearest ship
 scoreboard players operation search dplib.sid = @e[tag=ship,sort=nearest,limit=1] dplib.sid.head
-# Kill all the guns of the ship (being linked as a member) by using the predicate dplib:sid/linked_to_limbs
+# Fire all the guns of the ship (being linked as a member) by using the predicate dplib:sid/linked_to_limbs
 execute as @e[tag=guns,predicate=dplib:sid/linked_to_limbs] at @s run function mypack:ship/guns/fire
 ```
 
