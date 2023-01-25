@@ -38,6 +38,8 @@
 #declare score_holder 10000000
 #declare score_holder 100000000
 #declare score_holder 1000000000
+#declare score_holder 2
+#declare score_holder 3
 #declare score_holder 180
 #declare score_holder 360
 #declare score_holder 2^31-1

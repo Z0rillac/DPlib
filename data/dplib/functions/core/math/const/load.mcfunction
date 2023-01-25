@@ -31,6 +31,8 @@ scoreboard players set 100000000 dplib.const 100000000
 scoreboard players set 1000000000 dplib.const 1000000000
 scoreboard players set 40000 dplib.const 40000
 scoreboard players set 40500 dplib.const 40500
+scoreboard players set 2 dplib.const 2
+scoreboard players set 3 dplib.const 3
 scoreboard players set 180 dplib.const 180
 scoreboard players set 360 dplib.const 360
 scoreboard players set 2^31-1 dplib.const 2147483647
