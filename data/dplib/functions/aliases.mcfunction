@@ -50,4 +50,5 @@
 
 #declare score_holder 2^<0..30>
 
-#alias entity cwe.sid.target @e[tag=dplib.sid.target,limit=1]
+#alias entity dplib.sid.target @e[tag=dplib.sid.target,limit=1]
+#alias entity dplib.thread.new_thread @e[tag=dplib.thread.new_thread,limit=1]
