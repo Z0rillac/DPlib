@@ -1,5 +1,5 @@
 # Datapack library
-This is a function library for datapack developed in mcfunction. It gives you access to mathematical functions and tools. It is designed to be directly included in the data file of your datapack or to be used as a dependency of your datapack. It is designed for performance and simplicity, it can be used in any datapack requiring simple or complex functions while being as fast as possible.
+This is a function library for datapack developed in mcfunction. It gives you access to mathematical functions and tools, code threading, and scoreboard ID (SID). It is designed to be directly included in the data file of your datapack or to be used as a dependency of your datapack. It is designed for performance and simplicity, it can be used in any datapack requiring simple or complex functions while being as fast as possible.
 ## How it works
 The function parameters must be in the scoreboard `dplib.in`.
 The values returned by the functions are in the scoreboard `dplib.out`.
@@ -38,41 +38,53 @@ https://github.com/Z0rillac/DPlib
 
 ## Index
 ### Math
-[functions/**ceil**](#mathfunctionsceil)
+[math/functions/**ceil**](#mathfunctionsceil)
 
-[functions/**comb**](#mathfunctionscomb)
+[math/functions/**comb**](#mathfunctionscomb)
 
-[functions/**copysign**](#mathfunctionscopysign)
+[math/functions/**copysign**](#mathfunctionscopysign)
 
-[functions/**fabs**](#mathfunctionsfabs)
+[math/functions/**fabs**](#mathfunctionsfabs)
 
-[functions/**factorial**](#mathfunctionsfactorial)
+[math/functions/**factorial**](#mathfunctionsfactorial)
 
-[functions/**floor**](#mathfunctionsfloor)
+[math/functions/**floor**](#mathfunctionsfloor)
 
-[functions/**gcd**](#mathfunctionsgcd)
+[math/functions/**gcd**](#mathfunctionsgcd)
 
-[functions/**pow**](#mathfunctionspow)
+[math/functions/**pow**](#mathfunctionspow)
 
-[functions/**sqrt**](#mathfunctionssqrt)
+[math/functions/**sqrt**](#mathfunctionssqrt)
 
-[functions/**cbrt**](#mathfunctionscbrt)
+[math/functions/**cbrt**](#mathfunctionscbrt)
 
-[functions/**cos**](#mathfunctionscos)
+[math/functions/**cos**](#mathfunctionscos)
 
-[functions/**sin**](#mathfunctionssin)
+[math/functions/**sin**](#mathfunctionssin)
 
-[functions/**tan**](#mathfunctionstan)
+[math/functions/**tan**](#mathfunctionstan)
 
-[tools/**distance**](#mathtoolsdistance)
+[math/tools/**distance**](#mathtoolsdistance)
 
-[tools/**isclose**](#mathtoolsisclose)
+[math/tools/**isclose**](#mathtoolsisclose)
 
-[tools/**random_binary**](#mathtoolsrandom_binary)
+[math/tools/**random_binary**](#mathtoolsrandom_binary)
 
-[tools/**random_range**](#mathtoolsrandom_range)
+[math/tools/**random_range**](#mathtoolsrandom_range)
 
-[tools/**random**](#mathtoolsrandom)
+[math/tools/**random**](#mathtoolsrandom)
+
+### Thread
+
+[thread/**new**](#threadnew)
+
+[thread/**kill**](#threadkill)
+
+### Scoreboard ID (SID)
+
+[(predicate) sid/**linked_to_head**]()
+
+[(predicate) sid/**linked_to_limbs**]()
 
 ### math/functions/ceil
 Returns the ceiling of `$in` scaled to `$scale`.
@@ -271,4 +283,34 @@ Input:
 Output:
     $out = output
 Scale: 1
+```
+
+### thread/new
+Creates a new thread.
+```
+
+```
+
+### thread/kill
+Kills the current used thread.
+```
+
+```
+
+### sid/linked_to_head
+Creates a new thread.
+```mcfunction
+# Sets the target SID to the one of the nearest ship
+scoreboard players operation search dplib.sid = @e[tag=ship,sort=nearest,limit=1] dplib.sid.head
+# Kill all the guns of the ship (being linked as a member) by using the predicate dplib:sid/linked_to_limbs
+kill @e[tag=guns,predicate=dplib:sid/linked_to_limbs]
+```
+
+### thread/linked_to_limbs
+Kills the current used thread.
+```mcfunction
+# Sets the target SID to the head of the current limbs (the seat of the ship)
+scoreboard players operation search dplib.sid = @s[tag=seat] dplib.sid.limbs
+# Execute the function mypack:ship/rotate from the ship using the predicate dplib:sid/linked_to_head
+execute as @e[tag=ship,predicate=dplib:sid/linked_to_head] run function mypack:ship/rotate
 ```
