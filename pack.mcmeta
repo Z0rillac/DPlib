@@ -1,6 +1,6 @@
 {
 	"pack": {
-		"pack_format":8,
-		"description": {"color":"green","text":"DPlib [v1.0] | by Zorillac"}
+		"pack_format":11,
+		"description": {"color":"green","text":"Datapack Library [v1.2] | Math, SID, Threads ... | (c) Copyright 2023 Z0rillac"}
 	}
 }
