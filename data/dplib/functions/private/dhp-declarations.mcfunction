@@ -1,4 +1,4 @@
-#> dplib:private/aliases
+#> dplib:private/dhp-declarations
 # @private
 
 ## Datapack Library v1.2
