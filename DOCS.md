@@ -88,6 +88,8 @@ https://github.com/Z0rillac/DPlib
 
 [(predicate) sid/**linked_to_limbs**](#sidlinked_to_limbs)
 
+[sid/**new_head**](#sidnew_head)
+
 ### math/functions/ceil
 Returns the ceiling of `$in` scaled to `$scale`.
 ```
@@ -325,3 +327,6 @@ scoreboard players operation search dplib.sid = @s[tag=seat] dplib.sid.limbs
 # Execute the function mypack:ship/rotate from the ship using the predicate dplib:sid/linked_to_head
 execute as @e[tag=ship,predicate=dplib:sid/linked_to_head] at @s run function mypack:ship/rotate
 ```
+
+### sid/new_head
+Run as an entity. Setup the entity as a new head with his own sid.
