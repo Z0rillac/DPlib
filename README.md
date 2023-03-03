@@ -32,6 +32,6 @@ The complete documentation can be found [here.](https://github.com/Z0rillac/DPli
 
 It is advisable to credit the project :
 ```
-This datapack depends on  DPlib by Zorillac
+This datapack uses DPlib by Zorillac
 https://github.com/Z0rillac/DPlib
 ```

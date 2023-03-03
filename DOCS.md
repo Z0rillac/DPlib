@@ -32,7 +32,7 @@ This library is made to be used with [Data-pack Helper Plus](https://marketplace
 
 It is advisable to credit the project :
 ```
-This datapack depends on  DPlib by Zorillac
+This datapack uses DPlib by Zorillac
 https://github.com/Z0rillac/DPlib
 ```
 
