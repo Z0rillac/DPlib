@@ -13,4 +13,4 @@
 #
 # Scale: $scale
 
-function dplib:core/math/functions/floor/run
+function dplib:private/math/functions/floor/run

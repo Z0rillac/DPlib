@@ -11,4 +11,4 @@
 #
 # Scale: 1
 
-function dplib:core/math/tools/random/run
+function dplib:private/math/tools/random/run

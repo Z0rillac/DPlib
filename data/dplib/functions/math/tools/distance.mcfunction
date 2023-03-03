@@ -17,4 +17,4 @@
 #
 # Scale: 1
 
-function dplib:core/math/tools/distance/run
+function dplib:private/math/tools/distance/run

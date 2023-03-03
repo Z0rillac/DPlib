@@ -2,4 +2,4 @@
 # @public
 # @context tick
 
-function dplib:core/tick
+function dplib:private/tick

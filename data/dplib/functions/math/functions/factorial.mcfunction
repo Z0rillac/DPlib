@@ -12,4 +12,4 @@
 #
 # Scale: 1
 
-function dplib:core/math/functions/factorial/run
+function dplib:private/math/functions/factorial/run

@@ -13,4 +13,4 @@
 #
 # Scale: 1000000000
 
-function dplib:core/math/functions/sin/run
+function dplib:private/math/functions/sin/run

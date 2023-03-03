@@ -1,5 +1,5 @@
 {
 	"values": [
-		"dplib:core/load"
+		"dplib:private/load"
 	]
 }

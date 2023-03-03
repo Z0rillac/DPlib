@@ -14,4 +14,4 @@
 #   score $out dplib.out
 #       output
 
-function dplib:core/math/functions/copysign/run
+function dplib:private/math/functions/copysign/run

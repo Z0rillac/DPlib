@@ -5,7 +5,7 @@
       }
     },
     "rewards": {
-      "function": "dplib:core/player_setup"
+      "function": "dplib:private/player_setup"
     }
   }
   

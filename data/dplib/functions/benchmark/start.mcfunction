@@ -4,4 +4,4 @@
 
 # Starts a benchmark of your code set in dplib:benchmark/benchmark
 
-function dplib:core/benchmark/start
+function dplib:private/benchmark/start

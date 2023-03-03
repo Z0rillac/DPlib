@@ -26,7 +26,7 @@ scoreboard players operation $in dplib.in = $out dplib.out
 # Return the square root
 function dplib:math/functions/sqrt
 ```
-`dplib:core/` is used internally.
+`dplib:private/` is used internally.
 
 This library is made to be used with [Data-pack Helper Plus](https://marketplace.visualstudio.com/items?itemName=SPGoding.datapack-language-server) extension, it is easier to find the functions thanks to the auto completion provided by the extension and a library of aliases.
 

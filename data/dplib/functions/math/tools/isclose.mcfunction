@@ -13,4 +13,4 @@
 # Output:
 #   $out = output (boolean)
 
-function dplib:core/math/tools/isclose/run
+function dplib:private/math/tools/isclose/run

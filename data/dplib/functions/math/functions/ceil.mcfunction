@@ -13,4 +13,4 @@
 #
 # Scale: $scale
 
-function dplib:core/math/functions/ceil/run
+function dplib:private/math/functions/ceil/run

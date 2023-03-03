@@ -13,4 +13,4 @@
 #
 # Scale: 1
 
-function dplib:core/math/tools/random_range/run
+function dplib:private/math/tools/random_range/run

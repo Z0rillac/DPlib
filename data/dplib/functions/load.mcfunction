@@ -2,4 +2,4 @@
 # @public
 # @context load
 
-function dplib:core/load
+function dplib:private/load

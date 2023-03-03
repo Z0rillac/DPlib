@@ -13,4 +13,4 @@
 #
 # Scale: 1
 
-function dplib:core/math/functions/gcd/run
+function dplib:private/math/functions/gcd/run

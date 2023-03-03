@@ -10,4 +10,4 @@
 # Output:
 #   $out = output (boolean)
 
-function dplib:core/math/tools/random_binary/run
+function dplib:private/math/tools/random_binary/run

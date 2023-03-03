@@ -13,4 +13,4 @@
 #
 # Scale: 10000000
 
-function dplib:core/math/functions/tan/run
+function dplib:private/math/functions/tan/run

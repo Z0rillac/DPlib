@@ -2,4 +2,4 @@
 ## MIT License
 ## Copyright (c) 2023 Z0rillac
 
-function dplib:core/thread/functions/new/run
+function dplib:private/thread/functions/new/run

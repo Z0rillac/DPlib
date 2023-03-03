@@ -1,5 +1,5 @@
 {
 	"values": [
-		"dplib:core/tick"
+		"dplib:private/tick"
 	]
 }

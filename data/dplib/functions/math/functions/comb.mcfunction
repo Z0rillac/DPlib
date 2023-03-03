@@ -13,4 +13,4 @@
 #
 # Scale: 1
 
-function dplib:core/math/functions/comb/run
+function dplib:private/math/functions/comb/run

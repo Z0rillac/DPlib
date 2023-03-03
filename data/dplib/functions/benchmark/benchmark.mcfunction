@@ -10,4 +10,4 @@
 
 #--------------------------------------------------------------#
 
-function dplib:core/benchmark/loop
+function dplib:private/benchmark/loop

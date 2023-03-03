@@ -12,4 +12,4 @@
 #
 # Scale: 1
 
-function dplib:core/math/functions/sqrt/run
+function dplib:private/math/functions/sqrt/run
