@@ -1,9 +1,9 @@
-##
- # 118.mcfunction
- # 
- #
- # Created by Zorillac.
-##
+#> dplib:core/time/real_time/118
+# @private
+
+## Datapack Library v1.2
+## MIT License
+## Copyright (c) 2023 Z0rillac
 
 scoreboard players set ms/tick dplib.time 59999967
 execute store result score #ms dplib.time run worldborder get

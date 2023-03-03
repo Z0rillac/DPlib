@@ -1,3 +1,6 @@
+#> dplib:core/math/functions/cbrt/variable
+# @private
+
 ## Datapack Library v1.2
 ## MIT License
 ## Copyright (c) 2023 Z0rillac

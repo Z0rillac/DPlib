@@ -1,4 +1,9 @@
-## Header 1
+#> dplib:core/time/real_time/tick
+# @private
+
+## Datapack Library v1.2
+## MIT License
+## Copyright (c) 2023 Z0rillac
 
 execute in dplib:null as @e[distance=0..] run function dplib:core/time/real_time/kick
 
