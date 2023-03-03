@@ -1,4 +1,5 @@
 #> dplib:private/benchmark/loop
+# @within dplib:private/benchmark/start
 # @private
 
 ## Datapack Library v1.2
