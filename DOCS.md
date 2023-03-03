@@ -3,11 +3,11 @@ This is a function library for datapack developed in mcfunction. It gives you ac
 ## How it works
 First you need to load and tick the library by running the following functions:
 ```mcfunction
-#put this in your datapck in your datapack load/reset file before your code or in #minecraft:load (/minecraft/tags/functions/load.json) at the top of the list.
+#put this in your datapack load/reset file before your code or in #minecraft:load (/minecraft/tags/functions/load.json) at the top of the list.
 function dplib:load
 ```
 ```mcfunction
-#put this in your datapck in your datapack tick/main file before your code or in #minecraft:tick (/minecraft/tags/functions/tick.json) at the top of the list.
+#put this in your datapack tick/main file before your code or in #minecraft:tick (/minecraft/tags/functions/tick.json) at the top of the list.
 function dplib:tick
 ```
 The function parameters must be in the scoreboard `dplib.in`.
@@ -60,7 +60,7 @@ https://github.com/Z0rillac/DPlib
 
 [math/functions/**floor**](#mathfunctionsfloor)
 
-[math/functions/**floor**](#mathfunctionsround)
+[math/functions/**round**](#mathfunctionsround)
 
 [math/functions/**gcd**](#mathfunctionsgcd)
 

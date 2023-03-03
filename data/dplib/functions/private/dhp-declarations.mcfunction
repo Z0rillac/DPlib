@@ -32,6 +32,12 @@
 # ```
 #declare predicate dplib:sid/linked_to_head
 
+#>
+# **Starts a benchmark of your code set in `dplib:benchmark/benchmark`. Run this in the game.**
+# @public
+# @context player
+#declare tag/function #dplib:benchmark/start
+
 #declare score_holder $in
 #declare score_holder $in1
 #declare score_holder $in2
