@@ -50,6 +50,8 @@ https://github.com/Z0rillac/DPlib
 
 [math/functions/**floor**](#mathfunctionsfloor)
 
+[math/functions/**floor**](#mathfunctionsround)
+
 [math/functions/**gcd**](#mathfunctionsgcd)
 
 [math/functions/**pow**](#mathfunctionspow)
@@ -90,7 +92,7 @@ https://github.com/Z0rillac/DPlib
 Returns the ceiling of `$in` scaled to `$scale`.
 ```
 Input:
-    $in = initial number
+    $in = input number
     $scale = the scale
 Output:
     $out = output
@@ -112,7 +114,7 @@ Scale: 1
 Returns the magnitude (absolute value) of `$number` but the sign of `$source`.
 ```
 Input:
-    $number = initial number
+    $number = input number
     $source = sign source
 Output:
     $out = output
@@ -123,7 +125,7 @@ Scale: 1
 Returns the absolute value of `$in`.
 ```
 Input:
-    $in = initial number
+    $in = input number
 Output:
     $out = output
 Scale: 1
@@ -133,7 +135,7 @@ Scale: 1
 Returns `$in` factorial.
 ```
 Input:
-    $in = initial number
+    $in = input number
 Output:
     $out = output
 Scale: 1
@@ -143,7 +145,18 @@ Scale: 1
 Returns the floor `$in` scaled to `$scale`.
 ```
 Input:
-    $in = initial number
+    $in = input number
+    $scale = the scale
+Output:
+    $out = output
+Scale: $scale
+```
+
+### math/functions/round
+Returns `$in` rounded scaled to `$scale`.
+```
+Input:
+    $in = input number
     $scale = the scale
 Output:
     $out = output
@@ -166,7 +179,7 @@ Returns `$number` raised to the power `$exponent`.
 ```
 Input:
     $exponent = exponent
-    $number = initial number
+    $number = input number
 Output:
     $out = output
 Scale: 1
@@ -176,7 +189,7 @@ Scale: 1
 Returns the square root of `$in`.
 ```
 Input:
-    $in = initial number
+    $in = input number
 Output:
     $out = output
 Scale: 1
@@ -186,7 +199,7 @@ Scale: 1
 Returns the cube root of `$in`.
 ```
 Input:
-    $in = initial number
+    $in = input number
 Output:
     $out = output
 Scale: 1
@@ -196,7 +209,7 @@ Scale: 1
 Returns the cosinus of `$in` degrees.
 ```
 Input:
-    $in = initial number
+    $in = input number
 Output:
     $out = output
     $scale = the scale of $out
@@ -207,7 +220,7 @@ Scale: 1000000000
 Returns the sinus of `$in` degrees.
 ```
 Input:
-    $in = initial number
+    $in = input number
 Output:
     $out = output
     $scale = the scale of $out
@@ -218,7 +231,7 @@ Scale: 1000000000
 Returns the tangent of `$in` degrees.
 ```
 Input:
-    $in = initial number
+    $in = input number
 Output:
     $out = output
     $scale = the scale of $out
@@ -259,7 +272,6 @@ Can be replaced by :
 execute if predicate dplib:random_binary run ...
 ```
 ```
-Input:
 Output:
     $out = output (boolean)
 Scale: 1
@@ -279,7 +291,6 @@ Scale: 1
 ### math/tools/random
 Returns a random number between `-2147483648` and `2147483647`
 ```
-Input:
 Output:
     $out = output
 Scale: 1

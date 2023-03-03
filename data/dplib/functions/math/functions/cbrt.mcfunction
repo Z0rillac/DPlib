@@ -1,15 +1,23 @@
+#> dplib:math/functions/cbrt
+# **Returns the cube root of `$in`.**
+# ```text
+# Input:
+#     $in = input number
+# Output:
+#     $out = output
+# Scale: 1
+# ```
+# @input
+#   score $in dplib.in
+#       input number
+# @output
+#   score $out dplib.out
+#       output
+# @public
+# @context any
+
 ## Datapack Library v1.2
 ## MIT License
 ## Copyright (c) 2023 Z0rillac
-
-# Returns the cube root of $in.
-#
-# Input:
-#   $in = initial number
-#
-# Output:
-#   $out = output
-#
-# Scale: 1
 
 function dplib:private/math/functions/cbrt/run
