@@ -1,9 +1,19 @@
 # Datapack library
 This is a function library for datapack developed in mcfunction. It gives you access to mathematical functions and tools, code threading, and scoreboard ID (SID). It is designed to be directly included in the data file of your datapack or to be used as a dependency of your datapack. It is designed for performance and simplicity, it can be used in any datapack requiring simple or complex functions while being as fast as possible.
 ## How it works
+First you need to load and tick the library by running the following functions:
+```mcfunction
+#put this in your datapck in your datapack load/reset file before your code or in #minecraft:load (/minecraft/tags/functions/load.json) at the top of the list.
+function dplib:load
+```
+```mcfunction
+#put this in your datapck in your datapack tick/main file before your code or in #minecraft:tick (/minecraft/tags/functions/tick.json) at the top of the list.
+function dplib:tick
+```
 The function parameters must be in the scoreboard `dplib.in`.
 The values returned by the functions are in the scoreboard `dplib.out`.
 The name of the parameters and the returned values are always preceded by a `$`.
+You can see some informations on functions by hovering them when you call them in your code.
 The scoreboard `dplib.temp` is and can be used to save values temporarily to perform complex calculations. The name of the values must be preceded by a `#` by convention and for optimization purposes.
 Mathematical constants are found in the scoreboard `dplib.const`.
 
