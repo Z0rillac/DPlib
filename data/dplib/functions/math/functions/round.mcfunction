@@ -14,7 +14,7 @@
 #   score $scale dplib.in
 #       scale
 # @output
-#   score $out dplib.in
+#   score $out dplib.out
 #       output
 # @public
 # @context any

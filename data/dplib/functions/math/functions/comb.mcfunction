@@ -14,7 +14,7 @@
 #   score $in2 dplib.in
 #       number of items to chose
 # @output
-#   score $out dplib.in
+#   score $out dplib.out
 #       output
 # @public
 # @context any
