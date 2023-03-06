@@ -10,6 +10,8 @@
 # ```mcfunction
 # execute if predicate dplib:random_binary run ...
 # ```
+# @public
+# @context any
 #declare predicate dplib:random_binary
 
 #>
@@ -20,6 +22,8 @@
 # # Fire all the guns of the ship (being linked as a member) by using the predicate dplib:sid/linked_to_limbs
 # execute as @e[tag=guns,predicate=dplib:sid/linked_to_limbs] at @s run function mypack:ship/guns/fire
 # ```
+# @public
+# @context SID head
 #declare predicate dplib:sid/linked_to_limbs
 
 #>
@@ -30,6 +34,8 @@
 # # Execute the function mypack:ship/rotate from the ship using the predicate dplib:sid/linked_to_head
 # execute as @e[tag=ship,predicate=dplib:sid/linked_to_head] at @s run function mypack:ship/rotate
 # ```
+# @public
+# @context SID limb
 #declare predicate dplib:sid/linked_to_head
 
 #>
