@@ -1,5 +1,5 @@
 #> dplib:math/functions/gcd
-# **Returns the greatest common divisor of the `$in1` and `$in2`.**
+# **Returns the greatest common divisor of `$in1` and `$in2`.**
 # ```text
 # Input:
 #     $in1 = number 1

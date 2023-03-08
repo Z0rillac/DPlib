@@ -50,6 +50,8 @@ https://github.com/Z0rillac/DPlib
 ### Math
 [math/functions/**ceil**](#mathfunctionsceil)
 
+[math/functions/**clamp**](#mathfunctionsclamp)
+
 [math/functions/**comb**](#mathfunctionscomb)
 
 [math/functions/**copysign**](#mathfunctionscopysign)
@@ -63,6 +65,8 @@ https://github.com/Z0rillac/DPlib
 [math/functions/**round**](#mathfunctionsround)
 
 [math/functions/**gcd**](#mathfunctionsgcd)
+
+[math/functions/**lcm**](#mathfunctionslcm)
 
 [math/functions/**pow**](#mathfunctionspow)
 
@@ -109,6 +113,18 @@ Input:
 Output:
     $out = output
 Scale: $scale
+```
+
+### math/functions/clamp
+Returns `$in` clamped to the inclusive range of `$min` and `$max`.
+```text
+Input:
+    $in = input number
+    $min = minimum value
+    $max = maximum value
+Output:
+    $out = output
+Scale: 1
 ```
 
 ### math/functions/comb
@@ -176,7 +192,18 @@ Scale: $scale
 ```
 
 ### math/functions/gcd
-Returns the greatest common divisor of the `$in1` and `$in2`.
+Returns the greatest common divisor of `$in1` and `$in2`.
+```
+Input:
+    $in1 = number 1
+    $in2 = number 2
+Output:
+    $out = output
+Scale: 1
+```
+
+### math/functions/lcm
+Returns the least common multiple of `$in1` and `$in2`.
 ```
 Input:
     $in1 = number 1
