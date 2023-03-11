@@ -15,3 +15,4 @@
 # Will modify world border on minecraft 1.18 + if enabled because of MC-246429
 
 function dplib:private/thread/run_threads
+function dplib:private/time/tick
