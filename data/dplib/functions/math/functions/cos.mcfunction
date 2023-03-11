@@ -1,21 +1,24 @@
 #> dplib:math/functions/cos
-# **Returns the cosinus of `$in` degrees.**
+# **Returns an approximation of the cosine of `$in` degrees and this approximation scaled by `scale`, avoiding integer overflow for any value. If `$scale` is `0`, the calculation process will be ignored making the function faster. Can be defined like this: `cos($in)*$scale`**
 # ```text
 # Input:
-#     $in = input number
+#     $in = angle in degrees
+#     $scale = scale
 # Output:
 #     $out = output
-#     $scale = the scale of $out
-# Scale: 1000000000
+#     $scaled = $out scaled to $scale
+# Scale: $scale
 # ```
 # @input
 #   score $in dplib.in
-#       input number
+#       angle in degrees
+#   score $scale dplib.in
+#       scale
 # @output
 #   score $out dplib.out
 #       output
-#   score $scale dplib.out
-#       scale
+#   score $scaled dplib.out
+#       $out scaled to $scale
 # @public
 # @context any
 
