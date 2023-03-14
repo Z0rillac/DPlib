@@ -1,5 +1,5 @@
 {
-  "type": "dplib:void",
+  "type": "dplib.datetime:void",
   "generator": {
     "type": "minecraft:flat",
     "settings": {
