@@ -1,4 +1,4 @@
-#> dplib:benchmark/benchmark
+#> dplib.benchmark:benchmark
 # @private
 
 ## Datapack Library v1.2
@@ -13,4 +13,4 @@
 
 #--------------------------------------------------------------#
 
-function dplib:private/benchmark/loop
+function dplib.benchmark:private/module/loop
