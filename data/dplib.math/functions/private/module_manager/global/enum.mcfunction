@@ -51,3 +51,7 @@ scoreboard players set #state.phase.28 dplib.enum 28
 scoreboard players set #state.phase.29 dplib.enum 29
 scoreboard players set #state.phase.30 dplib.enum 30
 scoreboard players set #state.phase.31 dplib.enum 31
+
+scoreboard players set #dplib.version.v1.0 dplib.enum 0
+scoreboard players set #dplib.version.v1.1 dplib.enum 1
+scoreboard players set #dplib.version.v1.2 dplib.enum 2

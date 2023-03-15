@@ -8,6 +8,7 @@
 
 scoreboard objectives add dplib.threading.main dummy
 scoreboard objectives add dplib.threading.thread dummy
+scoreboard objectives add dplib.threading.enum dummy
 
 scoreboard objectives remove dplib.player.sid
 scoreboard objectives add dplib.threading.sid dummy

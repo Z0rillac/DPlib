@@ -43,5 +43,5 @@ scoreboard objectives add dplib.temp dummy
 scoreboard objectives add dplib.enum dummy
 scoreboard objectives add dplib.const dummy
 
-function dplib.math:private/module_manager/global/enum
-function dplib.math:private/module_manager/global/const
+function dplib.threading:private/module_manager/global/enum
+function dplib.threading:private/module_manager/global/const
