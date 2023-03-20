@@ -1,7 +1,7 @@
 #> dplib.benchmark:uninstall
 # Uninstall dplib.benchmark. Put it in your uninstall function.
 # @public
-# @context load
+# @context uninstall
 
 ## Datapack Library v1.2
 ## MIT License
