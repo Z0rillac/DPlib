@@ -1,5 +1,4 @@
 #> dplib.datetime:private/module/load
-# @within dplib.datetime:private/load
 # @private
 
 ## Datapack Library v1.2
@@ -77,4 +76,4 @@ data modify storage dplib.datetime:time root.get_unix.base64.chr append value {"
 data modify storage dplib.datetime:time root.get_unix.base64.chr append value {"chr":"+","byte":[B;1b,1b,1b,1b,1b,0b]}
 data modify storage dplib.datetime:time root.get_unix.base64.chr append value {"chr":"/","byte":[B;1b,1b,1b,1b,1b,1b]}
 
-function dplib.datetime:private/module/get_unix/run
+schedule function dplib.datetime:private/module/get_unix/run 1s

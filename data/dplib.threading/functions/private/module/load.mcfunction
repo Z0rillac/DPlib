@@ -1,5 +1,4 @@
 #> dplib.threading:private/module/load
-# @within dplib:private/load
 # @private
 
 ## Datapack Library v1.2
