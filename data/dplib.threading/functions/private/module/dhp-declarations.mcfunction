@@ -6,28 +6,33 @@
 ## Copyright (c) 2023 Z0rillac
 
 #>
-# Predicate to select all limbs of the "head" entity.
+# Predicate to select an entity/thread if it is a child of the entity/thread executing this.
 # ```mcfunction
-# # Sets the target SID to the one of the nearest ship
+# # Sets the target to one of the nearest ship
 # scoreboard players operation target dplib.sid = @e[tag=ship,sort=nearest,limit=1] dplib.sid.head
-# # Fire all the guns of the ship (being linked as a member) by using the predicate dplib:sid/linked_to_limbs
-# execute as @e[tag=guns,predicate=dplib:sid/linked_to_limbs] at @s run function mypack:ship/guns/fire
+# # Fire all the guns of the ship (being linked as a child) by using the predicate dplib.threading:child
+# execute as @e[tag=guns,predicate=dplib.threading:child] at @s run function mypack:ship/guns/fire
 # ```
 # @public
-# @context SID head
-#declare predicate dplib.threading:linked_to_limbs
+# @context parent
+#declare predicate dplib.threading:child
 
 #>
-# Predicate to select the "head" entity from one of his limbs.
+# Predicate to select the parent entity/thread from one of his childs.
 # ```mcfunction
-# # Sets the target SID to the head of the current limbs (the seat of the ship)
+# # Sets the target to the parent of the current child (the seat of the ship)
 # scoreboard players operation target dplib.sid = @s[tag=seat] dplib.sid.limbs
-# # Execute the function mypack:ship/rotate from the ship using the predicate dplib:sid/linked_to_head
-# execute as @e[tag=ship,predicate=dplib:sid/linked_to_head] at @s run function mypack:ship/rotate
+# # Execute the function mypack:ship/rotate from the ship using the predicate dplib.threading:parent
+# execute as @e[tag=ship,predicate=dplib.threading:parent] at @s run function mypack:ship/rotate
 # ```
 # @public
-# @context SID limb
-#declare predicate dplib.threading:linked_to_head
+# @context child
+#declare predicate dplib.threading:parent
 
-#alias entity dplib.sid.target @e[tag=dplib.sid.target,limit=1]
-#alias entity dplib.thread.new_thread @e[tag=dplib.thread.new_thread,limit=1]
+#>
+# eazeazeaea
+#declare tag dplib.thread.target
+#declare tag dplib.threading.thread.new
+#declare tag dplib.threading.thread
+
+#alias entity dplib.threading.thread.new @e[tag=dplib.threading.thread.new,limit=1]

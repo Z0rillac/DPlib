@@ -1,0 +1,7 @@
+{
+    "main":"mypack:main/thread_scheduler",
+    "foo":"mypack:foo/thread_scheduler",
+    "bar":"mypack:bar/thread_scheduler",
+    "baz":"mypack:baz/thread_scheduler"
+
+}

@@ -3,7 +3,7 @@
     "value": {
       "type": "minecraft:score",
       "target": "this",
-      "score": "dplib.threading.sid.head"
+      "score": "dplib.threading.child"
     },
     "range": {
       "min": {
@@ -12,7 +12,7 @@
           "type": "minecraft:fixed",
           "name": "target"
         },
-        "score": "dplib.threading.sid"
+        "score": "dplib.threading.main"
       },
       "max": {
         "type": "minecraft:score",
@@ -20,7 +20,7 @@
           "type": "minecraft:fixed",
           "name": "target"
         },
-        "score": "dplib.threading.sid"
+        "score": "dplib.threading.main"
       }
     }
   }

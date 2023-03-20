@@ -5,12 +5,11 @@
 ## MIT License
 ## Copyright (c) 2023 Z0rillac
 
+scoreboard objectives remove dplib.threading.in
 scoreboard objectives remove dplib.threading.main
-scoreboard objectives remove dplib.threading.thread
-scoreboard objectives remove dplib.threading.enum
-
-scoreboard objectives remove dplib.threading.sid
-scoreboard objectives remove dplib.threading.sid.limbs
-scoreboard objectives remove dplib.threading.sid.head
+scoreboard objectives remove dplib.threading.parent
+scoreboard objectives remove dplib.threading.child
+scoreboard objectives remove dplib.threading.function.enum
+scoreboard objectives remove dplib.threading.function.id
 
 execute as @e[tag=dplib.thread,limit=1] run function dplib:thread/kill
