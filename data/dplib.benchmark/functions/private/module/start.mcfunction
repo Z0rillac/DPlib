@@ -7,6 +7,8 @@
 
 tellraw @s {"text":"Start benchmark execution for 10 seconds ...","color":"gold"}
 
+scoreboard objectives setdisplay sidebar
+
 worldborder set 10001 0
 worldborder set 1 10
 
@@ -82,4 +84,4 @@ execute if score length dplib.benchmark.main matches 23 run data modify storage 
 execute if score length dplib.benchmark.main matches 24 run data modify storage dplib.benchmark:main root.ms set string storage dplib.benchmark:main root.ms 0 23
 
 
-tellraw @s ["",{"text":"Code executed ","color":"gold"},{"score":{"name":"executions","objective":"dplib.benchmark"},"color":"green"},{"text":" times for 10 seconds.\nOn average ","color":"gold"},{"nbt":"root.executionstick","storage": "dplib.benchmark:main","interpret": false,"color":"green"},{"text":" executions/tick.\nOn average ","color":"gold"},{"nbt":"root.ms","storage": "dplib.benchmark:main","interpret": false,"color":"green"},{"text":"ms ","color":"green"},{"text":"per execution.","color":"gold"}]
+tellraw @s ["",{"text":"Code executed ","color":"gold"},{"score":{"name":"executions","objective":"dplib.benchmark.main"},"color":"green"},{"text":" times for 10 seconds.\nOn average ","color":"gold"},{"nbt":"root.executionstick","storage": "dplib.benchmark:main","interpret": false,"color":"green"},{"text":" executions/tick.\nOn average ","color":"gold"},{"nbt":"root.ms","storage": "dplib.benchmark:main","interpret": false,"color":"green"},{"text":"ms ","color":"green"},{"text":"per execution.","color":"gold"}]
