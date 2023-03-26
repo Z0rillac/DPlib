@@ -5,7 +5,8 @@
 ## MIT License
 ## Copyright (c) 2023 Z0rillac
 
-scoreboard players set $out dplib.math.out 0
+scoreboard players set $out dplib.math.out -2147483648
+execute if predicate dplib.math:random_binary run function dplib.math:private/module/tools/random/31
 execute if predicate dplib.math:random_binary run scoreboard players operation $out dplib.math.out += 2^30 dplib.const
 execute if predicate dplib.math:random_binary run scoreboard players operation $out dplib.math.out += 2^29 dplib.const
 execute if predicate dplib.math:random_binary run scoreboard players operation $out dplib.math.out += 2^28 dplib.const
@@ -37,4 +38,3 @@ execute if predicate dplib.math:random_binary run scoreboard players operation $
 execute if predicate dplib.math:random_binary run scoreboard players operation $out dplib.math.out += 2^2 dplib.const
 execute if predicate dplib.math:random_binary run scoreboard players operation $out dplib.math.out += 2^1 dplib.const
 execute if predicate dplib.math:random_binary run scoreboard players operation $out dplib.math.out += 2^0 dplib.const
-execute if predicate dplib.math:random_binary run scoreboard players operation $out dplib.math.out *= -1 dplib.const
