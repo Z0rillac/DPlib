@@ -1,21 +1,24 @@
 #> dplib.math:functions/floor
 # Returns the floor of `$in` scaled to `$scale`.
-# ```text
-# Input:
-#     $in = input number
-#     $scale = the scale
-# Output:
-#     $out = output
-# Scale: $scale
+# ***  
+# Parameters -> score `dplib.math.in` :  
+# - `$in` : input value  
+# - `$scale` : the scale  
+#
+# Output -> score `dplib.math.out` :  
+# - `$out` : output value
+# ***
+# Example code :  
+# ```mcfunction
+# scoreboard players operation $in dplib.math.in = foo mypack.bar
+# scoreboard players set $scale dplib.math.in 100
+# function dplib.math:functions/floor
+# scoreboard players operation baz mypack.bar = $out dplib.math.out
 # ```
-# @input
-#   score $in dplib.math.in 
-#       input number
-#   score $scale dplib.math.in
-#       scale
-# @output
-#   score $out dplib.math.out
-#       output
+# ***
+# @input score $in dplib.math.in
+# @input score $scale dplib.math.in
+# @output score $out dplib.math.out
 # @public
 # @context any
 

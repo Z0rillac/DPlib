@@ -1,21 +1,24 @@
 #> dplib.math:functions/comb
 # Returns the number of ways to choose `$in2` items from `$in1` items without repetition and without order.
-# ```text
-# Input:
-#     $in1 = number of total items
-#     $in2 = number of items to choose
-# Output:
-#     $out = output
-# Scale: 1
+# ***  
+# Parameters -> score `dplib.math.in` :  
+# - `$in1` : number of total items
+# - `$in2` : number of items to choose
+#
+# Output -> score `dplib.math.out` :  
+# - `$out` : output value
+# ***
+# Example code :  
+# ```mcfunction
+# scoreboard players operation $in1 dplib.math.in = @e[tag=game.session] game.session.team_size
+# scoreboard players operation $in2 dplib.math.in = @e[tag=game.session] game.session.players
+# function dplib.math:functions/comb
+# scoreboard players operation @e[tag=game.session] game.session.frequency = $out dplib.math.out
 # ```
-# @input
-#   score $in1 dplib.math.in
-#       number of total items
-#   score $in2 dplib.math.in
-#       number of items to chose
-# @output
-#   score $out dplib.math.out
-#       output
+# ***
+# @input score $in1 dplib.math.in
+# @input score $in2 dplib.math.in
+# @output score $out dplib.math.out
 # @public
 # @context any
 

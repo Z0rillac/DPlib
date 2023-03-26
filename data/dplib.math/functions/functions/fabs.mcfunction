@@ -1,18 +1,21 @@
 #> dplib.math:functions/fabs
 # Returns the absolute value of `$in`.
-# ```text
-# Input:
-#     $in = input number
-# Output:
-#     $out = output
-# Scale: 1
+# ***  
+# Parameters -> score `dplib.math.in` :  
+# - `$in` : input value
+#
+# Output -> score `dplib.math.out` :  
+# - `$out` : output value
+# ***
+# Example code :  
+# ```mcfunction
+# scoreboard players operation $in dplib.math.in = foo mypack.bar
+# function dplib.math:functions/fabs
+# scoreboard players operation baz mypack.bar = $out dplib.math.out
 # ```
-# @input
-#   score $in dplib.math.in
-#       input number
-# @output
-#   score $out dplib.math.out
-#       output
+# ***
+# @input score $in dplib.math.in
+# @output score $out dplib.math.out
 # @public
 # @context any
 

@@ -1,21 +1,21 @@
 #> dplib.math:functions/tan
 # Returns the tangent of `$in` degrees.
-# ```text
-# Input:
-#     $in = input number
-# Output:
-#     $out = output
-#     $scale = the scale of $out
-# Scale: 10000000
+# ***  
+# Parameters -> score `dplib.math.in` :  
+# - `$in` : angle in degrees
+#
+# Output -> score `dplib.math.out` :  
+# - `$out` : tangent
+# ***
+# Example code :  
+# ```mcfunction
+# scoreboard players operation $in dplib.math.in = foo mypack.bar
+# function dplib.math:functions/tan
+# scoreboard players operation baz mypack.bar = $out dplib.math.out
 # ```
-# @input
-#   score $in dplib.math.in
-#       input number
-# @output
-#   score $out dplib.math.out
-#       output
-#   score $scale dplib.math.out
-#       scale
+# ***
+# @input score $in dplib.math.in
+# @output score $out dplib.math.out
 # @public
 # @context any
 

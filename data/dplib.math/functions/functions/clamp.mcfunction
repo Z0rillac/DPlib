@@ -1,24 +1,27 @@
 #> dplib.math:functions/clamp
 # Returns `$in` clamped to the inclusive range of `$min` and `$max`.
-# ```text
-# Input:
-#     $in = input number
-#     $min = minimum value
-#     $max = maximum value
-# Output:
-#     $out = output
-# Scale: 1
+# ***  
+# Parameters -> score `dplib.math.in` :  
+# - `$in` : input value  
+# - `$min` : minimum value  
+# - `$max` : maximum value  
+#
+# Output -> score `dplib.math.out` :  
+# - `$out` : output value
+# ***
+# Example code :  
+# ```mcfunction
+# scoreboard players set $min dplib.math.in 0
+# scoreboard players set $max dplib.math.in 64
+# scoreboard players operation $in dplib.math.in = foo mypack.bar
+# function dplib.math:functions/clamp
+# scoreboard players operation baz mypack.bar = $out dplib.math.out
 # ```
-# @input
-#   score $in dplib.math.in
-#       input number
-#   score $min dplib.math.in
-#       minimum value
-#   score $max dplib.math.in
-#       maximum value
-# @output
-#   score $out dplib.math.out
-#       output
+# ***
+# @input score $in dplib.math.in
+# @input score $min dplib.math.in
+# @input score $max dplib.math.in
+# @output score $out dplib.math.out
 # @public
 # @context any
 

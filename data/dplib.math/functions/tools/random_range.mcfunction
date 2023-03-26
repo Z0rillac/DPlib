@@ -1,21 +1,24 @@
 #> dplib.math:tools/random_range
 # Returns a random number between `$min` and `$max`.
-# ```text
-# Input:
-#     $min = minimum
-#     $max = maximum (not including)
-# Output:
-#     $out = output
-# Scale: 1
+# ***  
+# Parameters -> score `dplib.math.in` :  
+# - `$min` : minimum  
+# - `$max` : maximum (not including)  
+#
+# Output -> score `dplib.math.out` :  
+# - `$out` : output    
+# ***
+# Example code :  
+# ```mcfunction
+# scoreboard players set $min dplib.math.in 0
+# scoreboard players set $max dplib.math.in 64
+# function dplib.math:tools/random_range
+# scoreboard players operation baz mypack.bar = $out dplib.math.out
 # ```
-# @input
-#   score $min dplib.math.in
-#       minimum
-#   score $max dplib.math.in
-#       maximum (not including)
-# @output
-#   score $out dplib.math.out
-#       output
+# ***
+# @input score $min dplib.math.in
+# @input score $max dplib.math.in
+# @output score $out dplib.math.out
 # @public
 # @context any
 

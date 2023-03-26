@@ -1,13 +1,16 @@
 #> dplib.math:tools/random
 # Returns a random number between `-2147483648` and `2147483647`
-# ```text
-# Output:
-#     $out = output
-# Scale: 1
+# ***  
+# Output -> score `dplib.math.out` :  
+# - `$out` : output    
+# ***
+# Example code :  
+# ```mcfunction
+# function dplib.math:tools/random
+# scoreboard players operation baz mypack.bar = $out dplib.math.out
 # ```
-# @output
-#   score $out dplib.math.out
-#       output
+# ***
+# @output score $out dplib.math.out
 # @public
 # @context any
 
