@@ -9,6 +9,17 @@ execute in dplib.datetime:void run forceload add 0 0
 execute in dplib.datetime:void run setblock 0 0 0 minecraft:repeating_command_block{Command:"Baby blue buildings far above the crystal grove Magenta plated terrace with a table and a stove Guarded golden railing just to frame the pretty stars Fix that old piano and the birds will fall apart",TrackOutput:1b,auto:1b,conditionMet:1b}
 
 scoreboard objectives add dplib.datetime.main dummy
+scoreboard objectives add dplib.datetime.in dummy
+scoreboard objectives add dplib.datetime.out dummy
+
+scoreboard players set 4 dplib.const 4
+scoreboard players set 400 dplib.const 400
+scoreboard players set #request.sending dplib.enum 000
+scoreboard players set #request.waiting dplib.enum 100
+scoreboard players set #request.done dplib.enum 200
+scoreboard players set #request.received dplib.enum 202
+scoreboard players set #request.timeout dplib.enum 408
+
 data merge storage dplib.datetime:time {root:{}}
 data remove storage dplib.datetime:time root.get_unix.base64
 data modify storage dplib.datetime:time root.get_unix.base64.chr append value {"chr":"A","byte":[B;0b,0b,0b,0b,0b,0b]}
@@ -76,4 +87,4 @@ data modify storage dplib.datetime:time root.get_unix.base64.chr append value {"
 data modify storage dplib.datetime:time root.get_unix.base64.chr append value {"chr":"+","byte":[B;1b,1b,1b,1b,1b,0b]}
 data modify storage dplib.datetime:time root.get_unix.base64.chr append value {"chr":"/","byte":[B;1b,1b,1b,1b,1b,1b]}
 
-schedule function dplib.datetime:private/module/get_unix/run 1s
+scoreboard players operation request.state dplib.datetime.main = #request.sending dplib.enum

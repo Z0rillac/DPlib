@@ -6,7 +6,8 @@
 ## MIT License
 ## Copyright (c) 2023 Z0rillac
 
-scoreboard players set got_unix dplib.datetime.main 1
+scoreboard players operation request.state dplib.datetime.main = #request.done dplib.enum
+scoreboard players reset waiting_time dplib.datetime.main
 scoreboard players set unix_timestamp dplib.datetime.main 0
 
 execute in dplib.datetime:void run data modify storage dplib.datetime:time root.get_unix.base64.encoded set string block 0 1 0 SkullOwner.Properties.textures[0].Value 24 38
@@ -151,3 +152,8 @@ data remove storage dplib.datetime:time root.get_unix.bytes[0]
 data remove storage dplib.datetime:time root.get_unix.bytes[0]
 data remove storage dplib.datetime:time root.get_unix.bytes[0]
 data remove storage dplib.datetime:time root.get_unix.bytes[0]
+
+scoreboard players operation $timestamp dplib.datetime.in = unix_timestamp dplib.datetime.main
+function dplib.datetime:private/module/conversion/timestamp_to_datetime/run
+
+#tellraw @a ["",{"text":"year = "},{"score":{"name":"$year","objective":"dplib.datetime.out"}},{"text":"\nmonth = "},{"score":{"name":"$month","objective":"dplib.datetime.out"}},{"text":"\ndate = "},{"score":{"name":"$date","objective":"dplib.datetime.out"}},{"text":"\nhour = "},{"score":{"name":"$hour","objective":"dplib.datetime.out"}},{"text":"\nminutes = "},{"score":{"name":"$minutes","objective":"dplib.datetime.out"}},{"text":"\nseconds = "},{"score":{"name":"$seconds","objective":"dplib.datetime.out"}}]

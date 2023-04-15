@@ -6,4 +6,6 @@
 ## MIT License
 ## Copyright (c) 2023 Z0rillac
 
-execute if score got_unix dplib.datetime.main matches 0 in dplib.datetime:void if data block 0 1 0 SkullOwner.Properties run function dplib.datetime:private/module/get_unix/decode
+execute if score request.state dplib.datetime.main = #request.sending dplib.enum run function dplib.datetime:private/module/get_unix/download
+execute if score request.state dplib.datetime.main = #request.waiting dplib.enum run function dplib.datetime:private/module/get_unix/wait
+execute if score request.state dplib.datetime.main = #request.received dplib.enum in dplib.datetime:void run function dplib.datetime:private/module/get_unix/decode
