@@ -87,4 +87,17 @@ data modify storage dplib.datetime:time root.get_unix.base64.chr append value {"
 data modify storage dplib.datetime:time root.get_unix.base64.chr append value {"chr":"+","byte":[B;1b,1b,1b,1b,1b,0b]}
 data modify storage dplib.datetime:time root.get_unix.base64.chr append value {"chr":"/","byte":[B;1b,1b,1b,1b,1b,1b]}
 
-scoreboard players operation request.state dplib.datetime.main = #request.sending dplib.enum
+#>
+# This is not an exact science, I don't know why but this can't be executed 
+# two ticks after starting the server, probably because the dimension containing 
+# the command block to retrieve the time is still not loaded after the first few 
+# ticks. Since if this bug is true, it would probably depend on the performance 
+# of the player, if the datapack can't get a timestamp absolutely right at 
+# startup, you might have to delay the execution of the next line a bit more. 
+# If you did have to increase the delay, please let me know in an issue here: 
+# https://github.com/Z0rillac/DPlib/issues, specifying the circumstances (the 
+# value you put to make it work, if other datapacks were loaded at the same time, 
+# if they were adding dimensions, and also your overall performance in minecraft 
+# with the reference of your processor). This would allow me to raise this value 
+# for everyone if necessary.
+schedule function dplib.datetime:private/module/scheduled_load 1s
