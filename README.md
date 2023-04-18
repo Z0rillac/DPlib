@@ -12,12 +12,12 @@ This library adds:
 ## How it works
 
 You just need to import the module(s) you need (they work independently) into the data folder of your datapack, you then need to load it by executing this command at the beginning of your datapack load file: 
-```mcfunction
+```
 function dplib.<module>:load
 ```
 
 To ensure proper de-installation, you must include this line in the uninstallation file
-```mcfunction
+```
 function dplib.<module>:uninstall
 ```
 
