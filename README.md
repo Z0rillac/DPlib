@@ -15,6 +15,10 @@ You just need to import the module(s) you need (they work independently) into th
 ```
 function dplib.<module>:load
 ```
+You may also need to tick the module, if so add this to the beginning of your tick file:
+```
+function dplib.<module>:tick
+```
 
 To ensure proper de-installation, you must include this line in the uninstallation file
 ```
