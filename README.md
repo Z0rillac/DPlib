@@ -11,16 +11,16 @@ This library adds:
 
 ## How it works
 
-You just need to import the module(s) you need (they work independently) into the data folder of your datapack, you then need to load it by executing this command at the beginning of your datapack load file: 
+You just need to import the module(s) you need (they work independently) into the data folder of your datapack, you then need to load it by executing this command at the beginning of your datapack load file : 
 ```
 function dplib.<module>:load
 ```
-You may also need to tick the module, if so add this to the beginning of your tick file:
+You may also need to tick the module, if so add this to the beginning of your tick file :
 ```
 function dplib.<module>:tick
 ```
 
-To ensure proper de-installation, you must include this line in the uninstallation file
+To ensure proper de-installation, you must include this line in the uninstallation file :
 ```
 function dplib.<module>:uninstall
 ```
