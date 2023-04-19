@@ -346,6 +346,24 @@ scoreboard players operation quuy mypack.bar = $scaled dplib.math.out
 
 ***
 
+### dplib.math:functions/**cos_bsa**
+Returns the exact value of the cosine of `$in` degrees, scaled to `10000000` using a binary search algorithm. This method is much more accurate for Minecraft but also takes a little more time. It is recommended to use it more in case you do a big calculation using a single cosine.`
+
+Parameters -> score `dplib.math.in` :  
+- `$in` : angle in degrees  
+
+Output -> score `dplib.math.out` :  
+- `$out` : cosine  
+
+Example code :  
+```mcfunction
+scoreboard players operation $in dplib.math.in = foo mypack.bar
+function dplib.math:functions/cos_bsa
+scoreboard players operation baz mypack.bar = $out dplib.math.out
+```
+
+***
+
 ### dplib.math:functions/**sin**
 Returns an approximation of the sine of `$in` degrees and this approximation scaled by `scale`, avoiding integer overflow for any value. If `$scale` is `0`, the calculation process will be ignored making the function faster. Can be defined like this: `sin($in)*$scale`  
 
@@ -368,18 +386,37 @@ scoreboard players operation quuy mypack.bar = $scaled dplib.math.out
 
 ***
 
-### dplib.math:functions/**tan**
-Returns the tangent of `$in` degrees.  
+### dplib.math:functions/**sin_bsa**
+Returns the exact value of the sine of `$in` degrees, scaled to `10000000` using a binary search algorithm. This method is much more accurate for Minecraft but also takes a little more time. It is recommended to use it more in case you do a big calculation using a single sine.
 
 Parameters -> score `dplib.math.in` :  
 - `$in` : angle in degrees  
+
+Output -> score `dplib.math.out` :  
+- `$out` : sine  
+
+Example code :  
+```mcfunction
+scoreboard players operation $in dplib.math.in = foo mypack.bar
+function dplib.math:functions/sin_bsa
+scoreboard players operation baz mypack.bar = $out dplib.math.out
+```
+
+***
+
+### dplib.math:functions/**tan_bsa**
+Returns the tangent of `$in` degrees scaled to `10000000` using a binary search algorithm.  
+
+Parameters -> score `dplib.math.in` :  
+- `$in` : angle in degrees  
+
 Output -> score `dplib.math.out` :  
 - `$out` : tangent  
 
 Example code :  
 ```mcfunction
 scoreboard players operation $in dplib.math.in = foo mypack.bar
-function dplib.math:functions/tan
+function dplib.math:functions/tan_bsa
 scoreboard players operation baz mypack.bar = $out dplib.math.out
 ```
 

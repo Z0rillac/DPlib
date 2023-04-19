@@ -57,17 +57,19 @@ The hours of the local time of the server
 Current seconds since the Unix epoch (January 1, 1970, 00:00:00 UTC)
 
 Updated every tick.  
-This data is not directly available when the datapack is loaded, it takes up to two real seconds on average to get it from the internet, and up to 20 seconds to get it successfully on extremely limited internet connections. In any case it is impossible to get this information without an internet connection.
+This data is not directly available when the datapack is loaded, it takes up to two real seconds on average to get it from the internet, and up to 20 seconds to get it successfully on extremely limited internet connections. In any case it is impossible to get this information without an internet connection.  
+You can know when the timestamp is available with the `request.state` variable.
 
 ***
 
 ### dplib.datetime.main **request.state**
-The state of the request to obtain the timestamp:
-- `#request.sending dplib.enum` = `000` : The request will be sent.
-- `#request.waiting dplib.enum` = `100` : The module is waiting for a response.
-- `#request.received dplib.enum`= `202` : The request has been received and will be processed.
-- `#request.done dplib.enum` = `200` : The request has been processed
-- `#request.timeout dplib.enum` = `408` : The request did not receive a response within 20 seconds, the server is likely not connected to the internet.
+The state of the request to obtain the timestamp.  
+It can take these values:
+- `#request.sending dplib.enum`: The request will be sent.
+- `#request.waiting dplib.enum`: The module is waiting for a response.
+- `#request.received dplib.enum`: The request has been received and will be processed.
+- `#request.done dplib.enum`: The request has been processed
+- `#request.timeout dplib.enum`: The request did not receive a response within 20 seconds, the server is likely not connected to the internet.
 
 ***
 

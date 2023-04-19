@@ -1,13 +1,24 @@
 # Datapack library
 DPlib is a function library for datapack developed in mcfunction. It is designed so that you can directly include the module you want in your datapack, without worrying about performance or compatibility and without creating dependencies. It is designed for performance and simplicity, it can be used in any datapack requiring simple or complex functions while being as fast as possible.
 
-This library adds:
-- math functions and tools
-- advanced and ultra fast random generator
-- code threading
-- scoreboard ID
-- Real world time and date
-- More (WIP)
+This library contains:
+- dplib.math
+  - Number-theoretic and representation
+  - Power and logarithm
+  - Trigonometry
+  - RNG and LCG
+  - Other various functions
+- dplib.datetime
+  - Real world date and time
+  - Local time
+  - Time and duration calculation
+  - Time conversion
+- dplib.threading
+  - Code threading with contextual entities
+  - Hierarchical threading
+  - Scoreboard ID
+- dplib.benchmark
+  - Benchmarking for development only
 
 ## How it works
 
