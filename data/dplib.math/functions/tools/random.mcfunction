@@ -1,8 +1,8 @@
 #> dplib.math:tools/random
-# Returns a random number between `-2147483648` and `2147483647`
+# Returns a random number between `-2147483648` and `2147483647`.
 # ***  
 # Output -> score `dplib.math.out` :  
-# - `$out` : output    
+# - `$out` : output  
 # ***
 # Example code :  
 # ```mcfunction
