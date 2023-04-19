@@ -1,5 +1,5 @@
 #> dplib.math:functions/sin_bsa
-# Returns the exact value of the sine of `$in` degrees, scaled to `10000000` using a binary search algorithm. This method is much more accurate for Minecraft but also takes a little more time. It is recommended to use it more in case you do a big calculation using a single sine.`
+# Returns the exact value of the sine of `$in` degrees, scaled to `10000000` using a binary search algorithm. This method is much more accurate for Minecraft but also takes a little more time. It is recommended to use it more in case you do a big calculation using a single sine.
 # ***  
 # Parameters -> score `dplib.math.in` :  
 # - `$in` : angle in degrees

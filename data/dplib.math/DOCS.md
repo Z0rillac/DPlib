@@ -1,6 +1,6 @@
 # dplib.math
 dplib.math is a module for running mathematical functions and tools. It gives you access to simple trigonometry, RNG, simple logarithmic functions, and other various functions.  
-This module gives access to functions as defined in the standars of the math module of Python, limited to integer or scaled values.  
+This module gives access to functions as defined in the standars of the math module of Python, limited to integer or scaled values, and other variants of some functions, more optimized for Minecraft.  
 Approximation algorithms in some functions can be used, which does not guarantee absolute perfect results, but considering the rusticity of the mcfunction, the accuracy is sufficient.  
 
 ## Setup
@@ -43,9 +43,13 @@ function dplib.math:uninstall
 
 [dplib.math:functions/**cos**](#dplibmathfunctionscos)
 
+[dplib.math:functions/**cos_bsa**](#dplibmathfunctionscos_bsa)
+
 [dplib.math:functions/**sin**](#dplibmathfunctionssin)
 
-[dplib.math:functions/**tan**](#dplibmathfunctionstan)
+[dplib.math:functions/**sin_bsa**](#dplibmathfunctionssin_bsa)
+
+[dplib.math:functions/**tan_bsa**](#dplibmathfunctionstan_bsa)
 
 [dplib.math:tools/**distance**](#dplibmathtoolsdistance)
 

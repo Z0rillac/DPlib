@@ -36,6 +36,8 @@
 # `dplib.math:functions/comb`  
 # `dplib.math:functions/gcd`  
 # `dplib.math:functions/lcm`  
+# `dplib.math:functions/pow`  
+# `dplib.math:functions/copysign`  
 # `dplib.math:tools/isclose`  
 #declare score_holder $in1
 
@@ -45,6 +47,8 @@
 # `dplib.math:functions/comb`  
 # `dplib.math:functions/gcd`  
 # `dplib.math:functions/lcm`  
+# `dplib.math:functions/pow`  
+# `dplib.math:functions/copysign`  
 # `dplib.math:tools/isclose`  
 #declare score_holder $in2
 
@@ -64,15 +68,6 @@
 # `dplib.math:functions/clamp`  
 # `dplib.math:tools/random_range`  
 #declare score_holder $max
-
-#> TO BE DELETED
-#declare score_holder $number
-
-#> TO BE DELETED
-#declare score_holder $source
-
-#> TO BE DELETED
-#declare score_holder $exponent
 
 #> Output scale in dplib.math.out  
 # The value by which `$out` is multiplied.  
