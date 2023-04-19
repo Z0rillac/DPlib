@@ -67,9 +67,6 @@ function dplib.math:uninstall
 [dplib.math:**random_binary**](#dplibmathrandom_binary)
 
 ## Functions
-
-***
-
 ### dplib.math:functions/**ceil**
 Returns the ceiling of `$in` scaled to `$scale`.
 
@@ -538,9 +535,6 @@ scoreboard players operation baz mypack.bar = $out dplib.math.out
 ```
 
 ## Predicates
-
-***
-
 ### dplib.math:**random_binary**
 Has one in two chance of returning `true`.  
 

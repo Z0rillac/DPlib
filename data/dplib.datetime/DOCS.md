@@ -38,9 +38,6 @@ function dplib.datetime:uninstall
 [dplib.datetime:conversion/**timestamp_to_datetime**](#dplibdatetimeconversiontimestamp_to_datetime)
 
 ## Variables
-
-***
-
 ### dplib.datetime.main **local_seconds**
 The seconds of the local time of the server
 
@@ -80,9 +77,6 @@ The slot currently used to download the timestamp.
 The total number of slots is 8192. We refer to 'slot' here because, due to Minecraft's limitations, it is not possible to execute commands dynamically, and each different slot can only be used once per month. 8192 is normally sufficient for one month, but if you see that you have used all the slots in less than a month, or that the timestamp is necessarily incorrect, delete the 'usercache.json' file from your server folder or your .minecraft folder.
 
 ## Functions
-
-***
-
 ### dplib.datetime:conversion/**timestamp_to_datetime**
 Returns the date and time of `$timestamp`.
 
