@@ -1,5 +1,5 @@
 #> dplib.math:functions/round
-# Returns the ceiling of `$in` rounded to `$scale`.
+# Returns `$in` scaled to `$scale` rounded to an integer value
 # ***  
 # Parameters -> score `dplib.math.in` :  
 # - `$in` : input value  
