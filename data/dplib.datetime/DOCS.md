@@ -22,20 +22,20 @@ function dplib.datetime:uninstall
 
 ## Index
 ### Variables
-[dplib.datetime.main **local_seconds**](#dplibdatetimemain-local_seconds)
+[dplib.datetime.main **local_seconds**](DOCS.md#dplibdatetimemain-local_seconds)
 
-[dplib.datetime.main **local_minutes**](#dplibdatetimemain-local_minutes)
+[dplib.datetime.main **local_minutes**](DOCS.md#dplibdatetimemain-local_minutes)
 
-[dplib.datetime.main **local_hours**](#dplibdatetimemain-local_hours)
+[dplib.datetime.main **local_hours**](DOCS.md#dplibdatetimemain-local_hours)
 
-[dplib.datetime.main **unix_timestamp**](#dplibdatetimemain-unix_timestamp)
+[dplib.datetime.main **unix_timestamp**](DOCS.md#dplibdatetimemain-unix_timestamp)
 
-[dplib.datetime.main **request.state**](#dplibdatetimemain-requeststate)
+[dplib.datetime.main **request.state**](DOCS.md#dplibdatetimemain-requeststate)
 
-[dplib.datetime.main **request.slot**](#dplibdatetimemain-requestslot)
+[dplib.datetime.main **request.slot**](DOCS.md#dplibdatetimemain-requestslot)
 
 ### Functions
-[dplib.datetime:conversion/**timestamp_to_datetime**](#dplibdatetimeconversiontimestamp_to_datetime)
+[dplib.datetime:conversion/**timestamp_to_datetime**](DOCS.md#dplibdatetimeconversiontimestamp_to_datetime)
 
 ## Variables
 ### dplib.datetime.main **local_seconds**
@@ -74,7 +74,7 @@ The state of the request to obtain the timestamp:
 ### dplib.datetime.main **request.slot**
 The slot currently used to download the timestamp.
 
-The total number of slots is 8192. We refer to 'slot' here because, due to Minecraft's limitations, it is not possible to execute commands dynamically, and each different slot can only be used once per month. 8192 is normally sufficient for one month, but if you see that you have used all the slots in less than a month, or that the timestamp is necessarily incorrect, delete the 'usercache.json' file from your server folder or your .minecraft folder.
+The total number of slots is 8192. We refer to "slot" here because, due to Minecraft's limitations, it is not possible to execute commands dynamically, and each different slot can only be used once per month. 8192 is normally sufficient for one month, but if you see that you have used all the slots in less than a month, or that the timestamp is necessarily incorrect, delete the 'usercache.json' file from your server folder or your .minecraft folder.
 
 ## Functions
 ### dplib.datetime:conversion/**timestamp_to_datetime**
