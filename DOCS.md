@@ -1,369 +1,103 @@
 # Datapack library
-This is a function library for datapack developed in mcfunction. It gives you access to mathematical functions and tools, code threading, and scoreboard ID (SID). It is designed to be directly included in the data file of your datapack or to be used as a dependency of your datapack. It is designed for performance and simplicity, it can be used in any datapack requiring simple or complex functions while being as fast as possible.
-## How it works
-First you need to load and tick the library by running the following functions:
-```mcfunction
-#put this in your datapack load/reset file before your code or in #minecraft:load (/minecraft/tags/functions/load.json) at the top of the list.
-function dplib:load
-```
-```mcfunction
-#put this in your datapack tick/main file before your code or in #minecraft:tick (/minecraft/tags/functions/tick.json) at the top of the list.
-function dplib:tick
-```
-The function parameters must be in the scoreboard `dplib.in`.
-The values returned by the functions are in the scoreboard `dplib.out`.
-The name of the parameters and the returned values are always preceded by a `$`.
-You can see some informations on functions by hovering them when you call them in your code.
-The scoreboard `dplib.temp` is and can be used to save values temporarily to perform complex calculations. The name of the values must be preceded by a `#` by convention and for optimization purposes.
-Mathematical constants are found in the scoreboard `dplib.const`.
+DPlib is a function library for datapack developed in mcfunction. It is designed so that you can directly include the module you want in your datapack, without worrying about performance or compatibility and without creating dependencies. It is designed for performance and simplicity, it can be used in any datapack requiring simple or complex functions while being as fast as possible.
 
-Some values can be returned at a certain scale specified by the `$scale` value returned by the function.
-To set the returned value to the right scale, you have to divide it by `$scale`. This allows to return floating numbers. Only some functions can return this value, so you have to be careful not to scale the result of a function to the scale of another function.
+This library is made to be used with [Data-pack Helper Plus](https://marketplace.visualstudio.com/items?itemName=SPGoding.datapack-language-server) extension, it is easier to find the functions thanks to the auto completion provided by the extension and a library of aliases.
+
+## Introduction
+
+The documentation refers to the game as "the server". It refers to both the Minecraft client during a local game on the game's internal server and the external cross-platform server provided by Mojang (or other loader of Minecraft)
+
+First you need to import the module(s) you want (they work independently) into the data folder of your datapack, you then need to load it by executing this command at the beginning of your datapack load file: 
+```
+function dplib.<module>:load
+```
+
+You may also need to tick the module, if so add this to the beginning of your tick file:
+```
+function dplib.<module>:tick
+```
+
+To ensure proper uninstallation, you must include this line in the uninstallation file
+```
+function dplib.<module>:uninstall
+```
+
+The function parameters are in the scoreboard `dplib.<module>.in`.  
+The values returned by the functions are in the scoreboard `dplib.<module>.out`.  
+The name of the parameters and the returned values are always preceded by a `$`.  
+You can see some informations on functions by hovering them when you call them in your code.  
+You can get information about scoreholders by clicking on readmore in your scoreboard line.  
+The scoreboard `dplib.temp` is used to save values temporarily to perform complex calculations.  
+Global constants are found in the scoreboard `dplib.const`.  
+Global enum values are found in the scoreboard `dplib.enum`.  
+
+Some values can be returned at a certain scale specified by the `$scale` value returned by the function.  
+To set the returned value to the right scale, you have to divide it by `$scale`. This allows to return floating numbers. Only some functions can return this value, so you have to be careful not to scale the result of a function to the scale of another function.  
 
 Functions can be called like this:
 
-```mcfunction
-function dplib:<function domain>/<potential sub-domain>/<function name>
+```
+function dplib.<module>:<potential sub-domain>/<function name>
 ```
 Example:
 ```mcfunction
 ## This example returns the square root of a random number
 
 # Generates a random number
-function dplib:math/tools/random
+function dplib.math:tools/random
 # Put the random number as parameter $in
-scoreboard players operation $in dplib.in = $out dplib.out
+scoreboard players operation $in dplib.math.in = $out dplib.math.out
 # Return the square root
-function dplib:math/functions/sqrt
+function dplib.math:functions/sqrt
 ```
-`dplib:private/` is used internally.
 
-This library is made to be used with [Data-pack Helper Plus](https://marketplace.visualstudio.com/items?itemName=SPGoding.datapack-language-server) extension, it is easier to find the functions thanks to the auto completion provided by the extension and a library of aliases.
 
 It is advisable to credit the project :
 ```
-This datapack uses DPlib by Zorillac
+This datapack uses DPlib
 https://github.com/Z0rillac/DPlib
 ```
+## Documentation per module
 
-## Index
-### Math
-[math/functions/**ceil**](#mathfunctionsceil)
+[dplib.math](data/dplib.math/DOCS.md)  
+[dplib.datetime](data/dplib.datetime/DOCS.md)  
+[dplib.threading](data/dplib.threading/DOCS.md)  
+[dplib.benchmark](data/dplib.benchmark/DOCS.md)  
 
-[math/functions/**clamp**](#mathfunctionsclamp)
+## DPlib's functioning and global data
+### Instances
+DPlib is organized in different modules that can be loaded independently from each other. This avoids having to import modules that are not used or that cannot be unloaded or they will crash when the server is restarted (dplib.datetime).  
+Each module contains a `module_manager` folder in the `private` folder. This folder contains functions that allow to run correctly independently from the others, and to load and unload global data from dplib correctly.  
+When a module is loaded, it declares an instance of itself, which allows to count how many times it has been loaded. This is necessary to know if other installed datapacks are also using the same module, and thus it avoids uninstalling a module while another datapack is using it at the same time.
+If when you uninstall a datapack using a dplib module, the module has not been uninstalled, this is NORMAL, it just means that another datapack is using the same module, and therefore it should not be uninstalled.  
+The number of instances is calculated by counting how many times the load function of a module is loaded on the same gametime tick. This means that if you run the load function twice in your datapack, it will understand that there are two datapacks using the same module, and therefore if you uninstall your datapack, it will not uninstall the module.  
+This also means that if you run the load function by itself, not during the reload, the module will forget the previous loads.  
+Therefore, you should NOT:
+- load the same module more than once in your datapack
+- load a module after server reload
+- worry about the module not being uninstalled if other datapacks use it
+- uninstall the same module several times in your datapack
+### Global data
+DPlib shares code and data in common between all its modules. They are located in the `global` folder of the `module_manager` folder.
+When a module is loaded, these scoreboards are created:
+- dplib.main :
+It contains the number of instances of each module.
+- dplib.exec :
+Is used to calculate things necessary for the execution of a function itself like loops and multiple conditions.
+- dplib.temp :
+Is used to store useful values only during the execution of a function of 0 ticks, and which are ignored afterwards.
+- dplib.enum :
+Is used to store enums that you can use.
+- dplib.const :
+Is used to store constants.  
 
-[math/functions/**comb**](#mathfunctionscomb)
+The global data of dplib is loaded and unloaded in the same way as the modules, but it does not matter which module.
+The module code itself is in the `module` folder.
+All the code in the private folder is configured not to be displayed in Visual Studio Code, all the functions are directly accessible in the basic module folder and are displayed.
+### External library
+Some external libraries may be necessary for the operation of dplib, if so, they are located in the `library` folder in the `module_manager` folder.
+They are adapted to work inside the module, and not to work twice if imported by another datapack or if the module is loaded more than once.
 
-[math/functions/**copysign**](#mathfunctionscopysign)
+## License
 
-[math/functions/**fabs**](#mathfunctionsfabs)
-
-[math/functions/**factorial**](#mathfunctionsfactorial)
-
-[math/functions/**floor**](#mathfunctionsfloor)
-
-[math/functions/**round**](#mathfunctionsround)
-
-[math/functions/**gcd**](#mathfunctionsgcd)
-
-[math/functions/**lcm**](#mathfunctionslcm)
-
-[math/functions/**pow**](#mathfunctionspow)
-
-[math/functions/**sqrt**](#mathfunctionssqrt)
-
-[math/functions/**cbrt**](#mathfunctionscbrt)
-
-[math/functions/**cos**](#mathfunctionscos)
-
-[math/functions/**sin**](#mathfunctionssin)
-
-[math/functions/**tan**](#mathfunctionstan)
-
-[math/tools/**distance**](#mathtoolsdistance)
-
-[math/tools/**isclose**](#mathtoolsisclose)
-
-[math/tools/**random_binary**](#mathtoolsrandom_binary)
-
-[math/tools/**random_range**](#mathtoolsrandom_range)
-
-[math/tools/**random**](#mathtoolsrandom)
-
-### Thread
-
-[thread/**new**](#threadnew)
-
-[thread/**kill**](#threadkill)
-
-### Scoreboard ID (SID)
-
-[(predicate) sid/**linked_to_head**](#sidlinked_to_head)
-
-[(predicate) sid/**linked_to_limbs**](#sidlinked_to_limbs)
-
-[sid/**new_head**](#sidnew_head)
-
-### math/functions/ceil
-Returns the ceiling of `$in` scaled to `$scale`.
-```
-Input:
-    $in = input number
-    $scale = the scale
-Output:
-    $out = output
-Scale: $scale
-```
-
-### math/functions/clamp
-Returns `$in` clamped to the inclusive range of `$min` and `$max`.
-```text
-Input:
-    $in = input number
-    $min = minimum value
-    $max = maximum value
-Output:
-    $out = output
-Scale: 1
-```
-
-### math/functions/comb
-Returns the number of ways to choose `$in2` items from `$in1` items without repetition and without order.
-```
-Input:
-    $in1 = number of total items
-    $in2 = number of items to choose
-Output:
-    $out = output
-Scale: 1
-```
-
-### math/functions/copysign
-Returns the magnitude (absolute value) of `$number` but the sign of `$source`.
-```
-Input:
-    $number = input number
-    $source = sign source
-Output:
-    $out = output
-Scale: 1
-```
-
-### math/functions/fabs
-Returns the absolute value of `$in`.
-```
-Input:
-    $in = input number
-Output:
-    $out = output
-Scale: 1
-```
-
-### math/functions/factorial
-Returns `$in` factorial.
-```
-Input:
-    $in = input number
-Output:
-    $out = output
-Scale: 1
-```
-
-### math/functions/floor
-Returns the floor `$in` scaled to `$scale`.
-```
-Input:
-    $in = input number
-    $scale = the scale
-Output:
-    $out = output
-Scale: $scale
-```
-
-### math/functions/round
-Returns `$in` rounded scaled to `$scale`.
-```
-Input:
-    $in = input number
-    $scale = the scale
-Output:
-    $out = output
-Scale: $scale
-```
-
-### math/functions/gcd
-Returns the greatest common divisor of `$in1` and `$in2`.
-```
-Input:
-    $in1 = number 1
-    $in2 = number 2
-Output:
-    $out = output
-Scale: 1
-```
-
-### math/functions/lcm
-Returns the least common multiple of `$in1` and `$in2`.
-```
-Input:
-    $in1 = number 1
-    $in2 = number 2
-Output:
-    $out = output
-Scale: 1
-```
-
-### math/functions/pow
-Returns `$number` raised to the power `$exponent`.
-```
-Input:
-    $exponent = exponent
-    $number = input number
-Output:
-    $out = output
-Scale: 1
-```
-
-### math/functions/sqrt
-Returns the square root of `$in`.
-```
-Input:
-    $in = input number
-Output:
-    $out = output
-Scale: 1
-```
-
-### math/functions/cbrt
-Returns the cube root of `$in`.
-```
-Input:
-    $in = input number
-Output:
-    $out = output
-Scale: 1
-```
-
-### math/functions/cos
-Returns the cosinus of `$in` degrees.
-```
-Input:
-    $in = input number
-Output:
-    $out = output
-    $scale = the scale of $out
-Scale: 1000000000
-```
-
-### math/functions/sin
-Returns the sinus of `$in` degrees.
-```
-Input:
-    $in = input number
-Output:
-    $out = output
-    $scale = the scale of $out
-Scale: 1000000000
-```
-
-### math/functions/tan
-Returns the tangent of `$in` degrees.
-```
-Input:
-    $in = input number
-Output:
-    $out = output
-    $scale = the scale of $out
-Scale: 10000000
-```
-
-### math/tools/distance
-Returns the 3D distance between two point.
-```
-Input:
-    $x1 = X position of the first point
-    $y1 = Y position of the first point 
-    $z1 = Z position of the first point
-    $x2 = X position of the second point
-    $y2 = Y position of the second point
-    $z2 = Z position of the second point
-Output:
-    $out = the distance
-Scale: 1
-```
-
-### math/tools/isclose
-Returns `1` if the values `$in1` and `$in2` are close to each other and 0 otherwise.
-Whether or not two values are considered close is determined according to given tolerance.
-```
-Input:
-    $in1 = number 1
-    $in2 = number 2
-    $max = tolerence
-Output:
-    $out = output (boolean)
-```
-
-### math/tools/random_binary
-Returns `1` or `0` randomly.
-Can be replaced by :
-```mcfunction
-execute if predicate dplib:random_binary run ...
-```
-```
-Output:
-    $out = output (boolean)
-Scale: 1
-```
-
-### math/tools/random_range
-Returns a random number between `$min` and `$max`.
-```
-Input:
-    $min = minimum
-    $max = maximum (not including)
-Output:
-    $out = output
-Scale: 1
-```
-
-### math/tools/random
-Returns a random number between `-2147483648` and `2147483647`
-```
-Output:
-    $out = output
-Scale: 1
-```
-
-### thread/new
-Creates a new thread.
-```
-
-```
-
-### thread/kill
-Kills the current used thread.
-```
-
-```
-
-### sid/linked_to_limbs
-Predicate to select all limbs of the "head" entity
-```mcfunction
-# Sets the target SID to the one of the nearest ship
-scoreboard players operation target dplib.sid = @e[tag=ship,sort=nearest,limit=1] dplib.sid.head
-# Fire all the guns of the ship (being linked as a member) by using the predicate dplib:sid/linked_to_limbs
-execute as @e[tag=guns,predicate=dplib:sid/linked_to_limbs] at @s run function mypack:ship/guns/fire
-```
-
-### sid/linked_to_head
-Predicate to select the "head" entity from one of his limbs.
-```mcfunction
-# Sets the target SID to the head of the current limbs (the seat of the ship)
-scoreboard players operation target dplib.sid = @s[tag=seat] dplib.sid.limbs
-# Execute the function mypack:ship/rotate from the ship using the predicate dplib:sid/linked_to_head
-execute as @e[tag=ship,predicate=dplib:sid/linked_to_head] at @s run function mypack:ship/rotate
-```
-
-### sid/new_head
-Run as an entity. Setup the entity as a new head with his own sid.
+This library is licensed under the MIT License.
