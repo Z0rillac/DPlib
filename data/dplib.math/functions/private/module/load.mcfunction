@@ -9,6 +9,8 @@ scoreboard objectives add dplib.math.main dummy
 scoreboard objectives add dplib.math.in dummy
 scoreboard objectives add dplib.math.out dummy
 
+function dplib.math:private/module/constants
+
 scoreboard players set lcg.multiplier dplib.math.main 1103515245
 scoreboard players set lcg.increment dplib.math.main 12345
 function dplib.math:tools/random

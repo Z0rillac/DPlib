@@ -128,23 +128,6 @@
 #declare score_holder min_score_value
 
 
-#mathematical constants
-#> Output scale in dplib.math.out  
-# The value by which the constants are multiplied.  
-# Divide the constants by `constant_scale` to get the true value.  
-# Allows to return floats.  
-#declare score_holder constant_scale
-#> Constant value in dplib.const  
-# &pi; = `3.14159265`
-#declare score_holder pi
-#> Constant value in dplib.const  
-# &tau; = `6.28318530`
-#declare score_holder tau
-#> Constant value in dplib.const  
-# e = `2.71828182`
-#declare score_holder e
-
-
 #numbers
 scoreboard players set -1000000000 dplib.const -1000000000
 scoreboard players set -100000000 dplib.const -100000000
@@ -220,9 +203,3 @@ scoreboard players set max_worldborder dplib.const 59999968
 scoreboard players set nbt_scale dplib.const 64
 scoreboard players set max_score_value dplib.const 2147483647
 scoreboard players set min_score_value dplib.const -2147483648
-
-#mathematical constants
-scoreboard players set constant_scale dplib.const 100000000
-scoreboard players set pi dplib.const 314159265
-scoreboard players set tau dplib.const 628318530
-scoreboard players set e dplib.const 271828182

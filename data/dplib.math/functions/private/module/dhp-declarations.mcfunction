@@ -14,6 +14,24 @@
 # @context any
 #declare predicate dplib.math:random_binary
 
+#> Output scale in dplib.math.out  
+# The value by which the constants are multiplied.  
+# Divide the constants by `constant_scale` to get the true value.  
+# Allows to return floats.  
+#declare score_holder constant_scale
+
+#> Constant value in dplib.const  
+# &pi; = `3.14159265`
+#declare score_holder pi
+
+#> Constant value in dplib.const  
+# &tau; = `6.28318530`
+#declare score_holder tau
+
+#> Constant value in dplib.const  
+# e = `2.71828182`
+#declare score_holder e
+
 #> Main input score in dplib.math.in  
 #
 # Required for :  
