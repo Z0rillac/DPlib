@@ -5,5 +5,9 @@
 ## MIT License
 ## Copyright (c) 2023 Z0rillac
 
-execute if score $in dplib.math.in matches ..166375 run function dplib.math:private/module/functions/cbrt/variable
-execute if score $in dplib.math.in matches 166376.. run function dplib.math:private/module/functions/cbrt/fixed
+scoreboard players operation #guess dplib.temp = $in dplib.math.in
+scoreboard players operation #guess dplib.temp /= 3 dplib.const
+
+function dplib.math:private/module/functions/cbrt/loop
+
+scoreboard players operation $out dplib.math.out = #guess dplib.temp

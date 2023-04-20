@@ -5,5 +5,9 @@
 ## MIT License
 ## Copyright (c) 2023 Z0rillac
 
-execute if score $in dplib.math.in matches ..361 run function dplib.math:private/module/functions/sqrt/variable
-execute if score $in dplib.math.in matches 362.. run function dplib.math:private/module/functions/sqrt/fixed
+scoreboard players operation #guess dplib.temp = $in dplib.math.in
+scoreboard players operation #guess dplib.temp /= 2 dplib.const
+
+function dplib.math:private/module/functions/sqrt/loop
+
+scoreboard players operation $out dplib.math.out = #guess dplib.temp
