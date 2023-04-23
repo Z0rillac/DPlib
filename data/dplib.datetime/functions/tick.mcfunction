@@ -7,4 +7,6 @@
 ## MIT License
 ## Copyright (c) 2023 Z0rillac
 
-function dplib.datetime:private/module/tick
+execute store result score #gametime dplib.temp run time query gametime
+execute if score #dplib.datetime.last_tick dplib.main < #gametime dplib.temp run function dplib.datetime:private/module/tick
+scoreboard players operation #dplib.datetime.last_tick dplib.main = #gametime dplib.temp
