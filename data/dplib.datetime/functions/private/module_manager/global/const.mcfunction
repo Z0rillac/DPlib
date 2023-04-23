@@ -154,6 +154,8 @@ scoreboard players set 40000 dplib.const 40000
 scoreboard players set 40500 dplib.const 40500
 scoreboard players set 2 dplib.const 2
 scoreboard players set 3 dplib.const 3
+scoreboard players set 4 dplib.const 4
+scoreboard players set 400 dplib.const 400
 scoreboard players set 6 dplib.const 6
 scoreboard players set 180 dplib.const 180
 scoreboard players set 360 dplib.const 360

@@ -12,14 +12,6 @@ scoreboard objectives add dplib.datetime.main dummy
 scoreboard objectives add dplib.datetime.in dummy
 scoreboard objectives add dplib.datetime.out dummy
 
-scoreboard players set 4 dplib.const 4
-scoreboard players set 400 dplib.const 400
-scoreboard players set #request.sending dplib.enum 000
-scoreboard players set #request.waiting dplib.enum 100
-scoreboard players set #request.done dplib.enum 200
-scoreboard players set #request.received dplib.enum 202
-scoreboard players set #request.timeout dplib.enum 408
-
 data merge storage dplib.datetime:time {root:{}}
 data remove storage dplib.datetime:time root.get_unix.base64
 data modify storage dplib.datetime:time root.get_unix.base64.chr append value {"chr":"A","byte":[B;0b,0b,0b,0b,0b,0b]}

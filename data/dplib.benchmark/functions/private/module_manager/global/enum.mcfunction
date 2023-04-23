@@ -7,9 +7,11 @@
 ## MIT License
 ## Copyright (c) 2023 Z0rillac
 
+# Booleans
 scoreboard players set #false dplib.enum 0
 scoreboard players set #true dplib.enum 1
 
+# Process state
 scoreboard players set #state.disabled dplib.enum 0
 scoreboard players set #state.enabled dplib.enum 1
 scoreboard players set #state.stopped dplib.enum 2
@@ -19,6 +21,7 @@ scoreboard players set #state.idle dplib.enum 5
 scoreboard players set #state.stopping dplib.enum 6
 scoreboard players set #state.crashed dplib.enum 7
 
+# Process phase
 scoreboard players set #state.phase.0 dplib.enum 0
 scoreboard players set #state.phase.1 dplib.enum 1
 scoreboard players set #state.phase.2 dplib.enum 2
@@ -52,6 +55,14 @@ scoreboard players set #state.phase.29 dplib.enum 29
 scoreboard players set #state.phase.30 dplib.enum 30
 scoreboard players set #state.phase.31 dplib.enum 31
 
+# Request state
+scoreboard players set #request.sending dplib.enum 000
+scoreboard players set #request.waiting dplib.enum 100
+scoreboard players set #request.done dplib.enum 200
+scoreboard players set #request.received dplib.enum 202
+scoreboard players set #request.timeout dplib.enum 408
+
+# DPlib version
 scoreboard players set #dplib.version.v1.0 dplib.enum 0
 scoreboard players set #dplib.version.v1.1 dplib.enum 1
 scoreboard players set #dplib.version.v1.2 dplib.enum 2
