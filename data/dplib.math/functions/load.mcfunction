@@ -9,4 +9,4 @@
 
 function dplib.math:private/module_manager/global/load
 function dplib.math:private/module_manager/declare_instance
-function dplib.math:private/module/load
+execute if score dplib.math.instances dplib.main matches 1 run function dplib.math:private/module/load

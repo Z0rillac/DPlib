@@ -9,4 +9,4 @@
 
 function dplib.datetime:private/module_manager/global/load
 function dplib.datetime:private/module_manager/declare_instance
-function dplib.datetime:private/module/load
+execute if score dplib.datetime.instances dplib.main matches 1 run function dplib.datetime:private/module/load

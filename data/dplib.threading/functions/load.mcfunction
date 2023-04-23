@@ -9,4 +9,4 @@
 
 function dplib.threading:private/module_manager/global/load
 function dplib.threading:private/module_manager/declare_instance
-function dplib.threading:private/module/load
+execute if score dplib.threading.instances dplib.main matches 1 run function dplib.threading:private/module/load

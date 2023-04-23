@@ -9,4 +9,4 @@
 
 function dplib.benchmark:private/module_manager/global/load
 function dplib.benchmark:private/module_manager/declare_instance
-function dplib.benchmark:private/module/load
+execute if score dplib.benchmark.instances dplib.main matches 1 run function dplib.benchmark:private/module/load
