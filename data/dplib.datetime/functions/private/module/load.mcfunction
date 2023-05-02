@@ -5,6 +5,8 @@
 ## MIT License
 ## Copyright (c) 2023 Z0rillac
 
+scoreboard players operation dplib.datetime.enabled dplib.main = #true dplib.enum
+
 execute in dplib.datetime:void run forceload add 0 0
 execute in dplib.datetime:void run setblock 0 0 0 minecraft:repeating_command_block{Command:"Baby blue buildings far above the crystal grove Magenta plated terrace with a table and a stove Guarded golden railing just to frame the pretty stars Fix that old piano and the birds will fall apart",TrackOutput:1b,auto:1b,conditionMet:1b}
 
