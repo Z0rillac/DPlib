@@ -92,4 +92,6 @@ data modify storage dplib.datetime:time root.get_unix.base64.chr append value {"
 # if they were adding dimensions, and also your overall performance in minecraft 
 # with the reference of your processor). This would allow me to raise this value 
 # for everyone if necessary.
-schedule function dplib.datetime:private/module/scheduled_load 1s
+# I tried to detect if the world is loaded, but it returns values that are 
+# advanced in time, which is difficult to understand. This path needs more research.
+schedule function dplib.datetime:private/module/scheduled_load 2s
