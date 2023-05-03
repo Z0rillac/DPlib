@@ -49,7 +49,7 @@ ids_template = """#> dplib.threading:ids
 # It's up to you to fill this file while you're coding
 # Please refer to docs to learn about threading in datapacks.
 
-scoreboard players set #none dplib.thread.id 0"""
+scoreboard players set #none dplib.threading.function 0"""
 
 scheduler_IMP_doc_declaration = "\n# `#{thread}` = `{function}`  "
 scheduler_command = "\nexecute if score @s dplib.threading.function = #{thread} dplib.threading.function run function {function}"

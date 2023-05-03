@@ -9,7 +9,6 @@ scoreboard objectives remove dplib.threading.in
 scoreboard objectives remove dplib.threading.main
 scoreboard objectives remove dplib.threading.parent
 scoreboard objectives remove dplib.threading.child
-scoreboard objectives remove dplib.threading.function.enum
-scoreboard objectives remove dplib.threading.function.id
+scoreboard objectives remove dplib.threading.function
 
 execute as @e[tag=dplib.thread,limit=1] run function dplib:thread/kill
