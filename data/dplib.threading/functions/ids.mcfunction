@@ -16,7 +16,7 @@
 # It's up to you to fill this file while you're coding
 # Please refer to docs to learn about threading in datapacks.
 
-scoreboard players set #none dplib.thread.id 0
+scoreboard players set #none dplib.threading.function 0
 scoreboard players set #main dplib.threading.function 1
 scoreboard players set #foo dplib.threading.function 2
 scoreboard players set #bar dplib.threading.function 3

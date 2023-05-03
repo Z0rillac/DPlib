@@ -30,9 +30,35 @@
 #declare predicate dplib.threading:parent
 
 #>
-# eazeazeaea
-#declare tag dplib.thread.target
+# Tag to specify the target entity/thread.
+# ***
+# Example code :  
+# ```mcfunction
+# tag @e[tag=ship.seat] add dplib.threading.target
+# function dplib.threading:hierarachy/set_child_of
+# ```
+# ***
+# @public
+#declare tag dplib.threading.target
+
+#>
+# Tag that a new thread has after being created. This allows more customization. The tag must be deleted when the thread is created to avoid any dysfunction.
+# ***
+# Example code :  
+# ```mcfunction
+# ...
+# function dplib.threading:thread/new
+# tag @e[tag=dplib.threading.thread.new] add mypack.foo
+# tag @e[tag=dplib.threading.thread.new] remove dplib.threading.thread.new
+# ```
+# ***
+# @public
 #declare tag dplib.threading.thread.new
+
+#>
+# Tag that allows to identify threads.
+# ***
+# @public
 #declare tag dplib.threading.thread
 
 #alias entity dplib.threading.thread.new @e[tag=dplib.threading.thread.new,limit=1]

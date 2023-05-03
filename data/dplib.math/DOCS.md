@@ -2,6 +2,7 @@
 dplib.math is a module for running mathematical functions and tools. It gives you access to simple trigonometry, RNG, simple logarithmic functions, and other various functions.  
 This module gives access to functions as defined in the standars of the math module of Python, limited to integer or scaled values, and other variants of some functions, more optimized for Minecraft.  
 Approximation algorithms in some functions can be used, which does not guarantee absolute perfect results, but considering the rusticity of the mcfunction, the accuracy is sufficient.  
+The functions do not check for errors for performance reasons. For example, `sqrt(-1)` will not return any errors.  
 
 ## Setup
 At the beginning of your load (or init/reset) file:

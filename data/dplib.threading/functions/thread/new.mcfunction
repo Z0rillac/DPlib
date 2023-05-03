@@ -1,5 +1,5 @@
 #> dplib.threading:thread/new
-# Creates a new thread with a defined context. [What's a thread ?](e)  
+# Creates a new thread with a defined context. [What's a thread ?](../DOCS.md)  
 # When it is created, the thread is automatically considered as a child of the entity that created it.  
 # By default, the new thread has the tag `dplib.threading.thread.new`, allowing you more customization on the newly created thread. You must remove this tag after running this, or disfunctions may occur.
 # ***
@@ -33,7 +33,6 @@
 # >> - `$ry` : y rotation  
 # >> - `$rz` : z rotation  
 # - `$function` : specifies the function that the thread executes  
-# - `$tick` : Specifies if the thread executes at each tick  
 # ***
 # Example code :  
 # ```mcfunction
@@ -42,7 +41,6 @@
 # scoreboard players set $y dplib.threading.in -60
 # scoreboard players set $z dplib.threading.in -14
 # scoreboard players operation $function dplib.threading.in = #mypack.foo dplib.threading.function.enum 
-# scoreboard players operation $tick dplib.threading.in = #false dplib.enum
 # function dplib.threading:thread/new
 # tag @e[tag=dplib.threading.thread.new] add mypack.foo
 # tag @e[tag=dplib.threading.thread.new] remove dplib.threading.thread.new

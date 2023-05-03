@@ -1,10 +1,11 @@
 # dplib.datetime
-dplib.datetime is a module for obtaining and calculating real-life time information.  
+dplib.datetime is a module for obtaining real-life time information.  
 It does not calculate time information in Minecraft, and cannot measure time below the second.  
-Although the documentation mentions a "request", you do not need to set up a server to run the module. It depends on the Minecraft Java skin servers (textures.minecraft.net).
+Although the documentation mentions a "request", you do not need to set up an external server to run the module. It depends on the Minecraft Java skin servers (textures.minecraft.net).
 
 ## Warning
-This module cannot be deleted or disabled after it has been loaded once. It adds a new dimension that is absolutely necessary to measure time and avoid polluting the default dimension with blocks.
+This module cannot be deleted or disabled after it has been loaded once. It adds a new dimension that is absolutely necessary to measure time and avoid polluting the default dimension with blocks.  
+A warning about this will be displayed if you try to uninstall dplib.datetime. It is not recommended to remove this warning from the code, unless you want to modify it or warn with your own datapack that it should not be disabled or removed.
 
 ## Setup
 At the beginning of your load (or init/reset) file:

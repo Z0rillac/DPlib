@@ -1,11 +1,11 @@
-#> dplib.threading:hierarachy/set_child_of
-# Defines the entity/thread executing this as a child of the entity/thread with the `dplib.thread.target` tag.
+#> dplib.threading:hierarchy/set_child_of
+# Defines the entity/thread executing this as a child of the entity/thread with the `dplib.threading.target` tag.
 # The tag is automatically removed.
 # ***
 # Example code :  
 # ```mcfunction
-# tag @e[tag=ship.seat] add dplib.thread.target
-# function dplib.threading:hierarachy/set_child_of
+# tag @e[tag=ship.seat] add dplib.threading.target
+# function dplib.threading:hierarchy/set_child_of
 # ```
 # ***
 # @public
