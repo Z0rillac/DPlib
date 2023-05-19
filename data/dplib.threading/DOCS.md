@@ -174,7 +174,7 @@ Predicate to select an entity/thread if it is a child of the entity/thread execu
 
 ```mcfunction
 # Sets the target to one of the nearest ship
-scoreboard players operation target dplib.sid = @e[tag=ship,sort=nearest,limit=1] dplib.sid.head
+scoreboard players operation target dplib.threading.main = @e[tag=ship,sort=nearest,limit=1] dplib.threading.parent
 # Fire all the guns of the ship (being linked as a child) by using the predicate dplib.threading:child
 execute as @e[tag=guns,predicate=dplib.threading:child] at @s run function mypack:ship/guns/fire
 ```
@@ -186,7 +186,7 @@ Predicate to select the parent entity/thread from one of his childs.
 
 ```mcfunction
 # Sets the target to the parent of the current child (the seat of the ship)
-scoreboard players operation target dplib.sid = @s[tag=seat] dplib.sid.limbs
+scoreboard players operation target dplib.threading.main = @s[tag=seat] dplib.threading.child
 # Execute the function mypack:ship/rotate from the ship using the predicate dplib.threading:parent
 execute as @e[tag=ship,predicate=dplib.threading:parent] at @s run function mypack:ship/rotate
 ```
