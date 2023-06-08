@@ -1,4 +1,4 @@
-![img](https://i.imgur.com/kSMuzoE.png)
+![img](https://i.imgur.com/5Niiqn0.png)
 
 # Datapack library
 DPlib is a function library for datapack developed in mcfunction. It is designed so that you can directly include the module you want in your datapack, without worrying about performance or compatibility and without creating dependencies. It is designed for performance and simplicity, it can be used in any datapack requiring simple or complex functions while being as fast as possible.
