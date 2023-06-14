@@ -10,6 +10,7 @@
 scoreboard players set #loaded_instances dplib.temp 0
 scoreboard players operation #loaded_instances dplib.temp += dplib.benchmark.instances dplib.main
 scoreboard players operation #loaded_instances dplib.temp += dplib.datetime.instances dplib.main
+scoreboard players operation #loaded_instances dplib.temp += dplib.logger.instances dplib.main
 scoreboard players operation #loaded_instances dplib.temp += dplib.math.instances dplib.main
 scoreboard players operation #loaded_instances dplib.temp += dplib.threading.instances dplib.main
 

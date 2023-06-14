@@ -1,4 +1,4 @@
-#> dplib.benchmark:private/module_manager/global/uninstall
+#> dplib.logger:private/module_manager/global/uninstall
 # Uninstall dplib global data.
 # @private
 # @context module_manager
@@ -14,4 +14,4 @@ scoreboard players operation #loaded_instances dplib.temp += dplib.logger.instan
 scoreboard players operation #loaded_instances dplib.temp += dplib.math.instances dplib.main
 scoreboard players operation #loaded_instances dplib.temp += dplib.threading.instances dplib.main
 
-execute if score #loaded_instances dplib.temp matches ..0 run function dplib.benchmark:private/module_manager/global/uninstall_if
+execute if score #loaded_instances dplib.temp matches ..0 run function dplib.logger:private/module_manager/global/uninstall_if
