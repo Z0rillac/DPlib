@@ -5,7 +5,7 @@
 # @context each tick by dplib.datetime module
 # @private
 
-execute in dplib.datetime:void run data modify storage dplib.datetime:time root.get_local.string set string block 0 0 0 LastOutput 664 672
+execute in dplib.datetime:void run data modify storage dplib.datetime:time root.get_local.string set string block 0 0 0 LastOutput 10 18
 
 scoreboard players set local_hours dplib.datetime.main 0
 scoreboard players set local_minutes dplib.datetime.main 0

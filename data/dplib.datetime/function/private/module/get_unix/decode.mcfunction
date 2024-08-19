@@ -10,7 +10,7 @@ scoreboard players operation request.state dplib.datetime.main = #request.done d
 scoreboard players reset waiting_time dplib.datetime.main
 scoreboard players set unix_timestamp dplib.datetime.main 0
 
-execute in dplib.datetime:void run data modify storage dplib.datetime:time root.get_unix.base64.encoded set string block 0 1 0 SkullOwner.Properties.textures[0].Value 24 38
+execute in dplib.datetime:void run data modify storage dplib.datetime:time root.get_unix.base64.encoded set string block 0 1 0 profile.properties[0].value 24 38
 
 data modify storage dplib.datetime:time root.get_unix.bytes set value [B;]
 data modify storage dplib.datetime:time root.get_unix.base64.to_test set string storage dplib.datetime:time root.get_unix.base64.encoded 0 1
