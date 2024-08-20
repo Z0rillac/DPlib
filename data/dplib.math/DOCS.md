@@ -44,13 +44,9 @@ function dplib.math:uninstall
 
 [dplib.math:functions/**cos**](#dplibmathfunctionscos)
 
-[dplib.math:functions/**cos_bsa**](#dplibmathfunctionscos_bsa)
-
 [dplib.math:functions/**sin**](#dplibmathfunctionssin)
 
-[dplib.math:functions/**sin_bsa**](#dplibmathfunctionssin_bsa)
-
-[dplib.math:functions/**tan_bsa**](#dplibmathfunctionstan_bsa)
+[dplib.math:functions/**tan**](#dplibmathfunctionstan)
 
 [dplib.math:tools/**distance**](#dplibmathtoolsdistance)
 
@@ -325,88 +321,45 @@ scoreboard players operation baz mypack.bar = $out dplib.math.out
 
 ***
 
+
 ### dplib.math:functions/**cos**
-Returns an approximation of the cosine of `$in` degrees and this approximation scaled by `scale`, avoiding integer overflow for any value. If `$scale` is `0`, the calculation process will be ignored making the function faster. Can be defined like this: `cos($in)*$scale`  
- 
+Returns the exact value of the cosine of `$in` degrees, scaled to `10000000`.
+
 Parameters -> score `dplib.math.in` :  
 - `$in` : angle in degrees  
-- `$scale` : scale  
 
 Output -> score `dplib.math.out` :  
 - `$out` : cosine  
-- `$scaled` : the scaled cosine  
 
 Example code :  
 ```mcfunction
 scoreboard players operation $in dplib.math.in = foo mypack.bar
-scoreboard players operation $scale dplib.math.in = quux mypack.bar
 function dplib.math:functions/cos
-scoreboard players operation baz mypack.bar = $out dplib.math.out
-scoreboard players operation quuy mypack.bar = $scaled dplib.math.out
-```
-
-***
-
-### dplib.math:functions/**cos_bsa**
-Returns the exact value of the cosine of `$in` degrees, scaled to `10000000` using a binary search algorithm. This method is much more accurate for Minecraft but also takes a little more time. It is recommended to use it more in case you do a big calculation using a single cosine.`
-
-Parameters -> score `dplib.math.in` :  
-- `$in` : angle in degrees  
-
-Output -> score `dplib.math.out` :  
-- `$out` : cosine  
-
-Example code :  
-```mcfunction
-scoreboard players operation $in dplib.math.in = foo mypack.bar
-function dplib.math:functions/cos_bsa
 scoreboard players operation baz mypack.bar = $out dplib.math.out
 ```
 
 ***
 
 ### dplib.math:functions/**sin**
-Returns an approximation of the sine of `$in` degrees and this approximation scaled by `scale`, avoiding integer overflow for any value. If `$scale` is `0`, the calculation process will be ignored making the function faster. Can be defined like this: `sin($in)*$scale`  
+Returns the exact value of the sine of `$in` degrees, scaled to `10000000`.
 
 Parameters -> score `dplib.math.in` :  
 - `$in` : angle in degrees  
-- `$scale` : scale  
 
 Output -> score `dplib.math.out` :  
 - `$out` : sine  
-- `$scaled` : the scaled cosine  
 
 Example code :  
 ```mcfunction
 scoreboard players operation $in dplib.math.in = foo mypack.bar
-scoreboard players operation $scale dplib.math.in = quux mypack.bar
 function dplib.math:functions/sin
 scoreboard players operation baz mypack.bar = $out dplib.math.out
-scoreboard players operation quuy mypack.bar = $scaled dplib.math.out
 ```
 
 ***
 
-### dplib.math:functions/**sin_bsa**
-Returns the exact value of the sine of `$in` degrees, scaled to `10000000` using a binary search algorithm. This method is much more accurate for Minecraft but also takes a little more time. It is recommended to use it more in case you do a big calculation using a single sine.
-
-Parameters -> score `dplib.math.in` :  
-- `$in` : angle in degrees  
-
-Output -> score `dplib.math.out` :  
-- `$out` : sine  
-
-Example code :  
-```mcfunction
-scoreboard players operation $in dplib.math.in = foo mypack.bar
-function dplib.math:functions/sin_bsa
-scoreboard players operation baz mypack.bar = $out dplib.math.out
-```
-
-***
-
-### dplib.math:functions/**tan_bsa**
-Returns the tangent of `$in` degrees scaled to `10000000` using a binary search algorithm.  
+### dplib.math:functions/**tan**
+Returns the tangent of `$in` degrees scaled to `10000000`.
 
 Parameters -> score `dplib.math.in` :  
 - `$in` : angle in degrees  
@@ -417,7 +370,7 @@ Output -> score `dplib.math.out` :
 Example code :  
 ```mcfunction
 scoreboard players operation $in dplib.math.in = foo mypack.bar
-function dplib.math:functions/tan_bsa
+function dplib.math:functions/tan
 scoreboard players operation baz mypack.bar = $out dplib.math.out
 ```
 

@@ -1,27 +1,21 @@
 #> dplib.math:functions/cos
-# Returns an approximation of the cosine of `$in` degrees and this approximation scaled by `scale`, avoiding integer overflow for any value. If `$scale` is `0`, the calculation process will be ignored making the function faster. Can be defined like this: `cos($in)*$scale`
-# ***  
+# Returns the exact value of the cosine of `$in` degrees, scaled to `10000000`.
+#
 # Parameters -> score `dplib.math.in` :  
 # - `$in` : angle in degrees
-# - `$scale` : scale
 #
 # Output -> score `dplib.math.out` :  
 # - `$out` : cosine
-# - `$scaled` : the scaled cosine
 # ***
 # Example code :  
 # ```mcfunction
 # scoreboard players operation $in dplib.math.in = foo mypack.bar
-# scoreboard players operation $scale dplib.math.in = quux mypack.bar
 # function dplib.math:functions/cos
 # scoreboard players operation baz mypack.bar = $out dplib.math.out
-# scoreboard players operation quuy mypack.bar = $scaled dplib.math.out
 # ```
 # ***
 # @input score $in dplib.math.in
-# @input score $scale dplib.math.in
 # @output score $out dplib.math.out
-# @output score $scaled dplib.math.out
 # @public
 # @context any
 
@@ -29,4 +23,4 @@
 ## MIT License
 ## Copyright (c) 2023 Z0rillac
 
-function dplib.math:private/module/functions/cos/run
+function dplib.math:private/module/functions/cos_bsa/run
