@@ -1,7 +1,6 @@
 # dplib.math
-dplib.math is a module for running mathematical functions and tools. It gives you access to simple trigonometry, RNG, simple logarithmic functions, and other various functions.  
-This module gives access to functions as defined in the standars of the math module of Python, limited to integer or scaled values, and other variants of some functions, more optimized for Minecraft.  
-Approximation algorithms in some functions can be used, which does not guarantee absolute perfect results, but considering the rusticity of the mcfunction, the accuracy is sufficient.  
+dplib.math provides fast and unverified mathematical functions and tools such as simple trigonometry, simple logarithmic functions, and other various functions.  
+This module gives access to functions as defined in the standars of the math module of Python, limited to integer or scaled values.
 The functions do not check for errors for performance reasons. For example, `sqrt(-1)` will not return any errors.  
 
 ## Setup
@@ -52,21 +51,6 @@ function dplib.math:uninstall
 
 [dplib.math:tools/**isclose**](#dplibmathtoolsisclose)
 
-[dplib.math:tools/**random_binary**](#dplibmathtoolsrandom_binary)
-
-[dplib.math:tools/**random_range**](#dplibmathtoolsrandom_range)
-
-[dplib.math:tools/**random**](#dplibmathtoolsrandom)
-
-[dplib.math:tools/**random_binary_lcg**](#dplibmathtoolsrandom_binary_lcg)
-
-[dplib.math:tools/**random_range_lcg**](#dplibmathtoolsrandom_range_lcg)
-
-[dplib.math:tools/**random_lcg**](#dplibmathtoolsrandom_lcg)
-
-### Predicates
-[dplib.math:**random_binary**](#dplibmathrandom_binary)
-
 ## Functions
 ### dplib.math:functions/**ceil**
 Returns the ceiling of `$in` scaled to `$scale`.
@@ -111,7 +95,7 @@ scoreboard players operation baz mypack.bar = $out dplib.math.out
 ***
 
 ### dplib.math:functions/**comb**
-Returns the number of ways to choose `$in2` items from `$in1` items without repetition and without order.
+Returns the number of ways to choose `$in2` items from `$in1` items without repetition and without order. For inputs `$in1` greater than `29`, depending on `$in2` the function may easily overflow and return a false result.
 
 Parameters -> score `dplib.math.in` :  
 - `$in1` : number of total items  
@@ -425,116 +409,6 @@ scoreboard players operation $in2 dplib.math.in = foo mypack.bar
 scoreboard players set $max dplib.math.in 5
 function dplib.math:tools/isclose
 scoreboard players operation baz mypack.bar = $out dplib.math.out
-```
-
-***
-
-### dplib.math:tools/**random_binary**
-Returns `1` or `0` randomly.  
-Can be replaced by :  
-```mcfunction
-execute if predicate dplib.math:random_binary run ...
-```
-
-Output -> score `dplib.math.out` :  
-- `$out` : output (boolean)  
-
-Example code :  
-```mcfunction
-function dplib.math:tools/random_binary
-execute if score $out dplib.math.out = #true dplib.enum run function mypack:foo
-# OR (better)
-execute if predicate dplib.math:random_binary run function mypack:foo
-```
-
-***
-
-### dplib.math:tools/**random_range**
-Returns a random number between `$min` and `$max`.  
-
-Parameters -> score `dplib.math.in` :  
-- `$min` : minimum  
-- `$max` : maximum (not including)  
-
-Output -> score `dplib.math.out` :  
-- `$out` : output    
-
-Example code :  
-```mcfunction
-scoreboard players set $min dplib.math.in 0
-scoreboard players set $max dplib.math.in 64
-function dplib.math:tools/random_range
-scoreboard players operation baz mypack.bar = $out dplib.math.out
-```
-
-***
-
-### dplib.math:tools/**random**
-Returns a random number between `-2147483648` and `2147483647`.
-
-Output -> score `dplib.math.out` :  
-- `$out` : output  
-
-Example code :  
-```mcfunction
-function dplib.math:tools/random
-scoreboard players operation baz mypack.bar = $out dplib.math.out
-```
-
-***
-
-### dplib.math:tools/**random_binary_lcg**
-Returns `1` or `0` randomly using the Linear Congruential Generator Algorithm.  
-
-Output -> score `dplib.math.out` :  
-- `$out` : output (boolean)  
-
-Example code :  
-```mcfunction
-function dplib.math:tools/random_binary_lcg
-execute if score $out dplib.math.out = #true dplib.enum run function mypack:foo
-```
-
-***
-
-### dplib.math:tools/**random_range_lcg**
-Returns a random number between `$min` and `$max` using the Linear Congruential Generator Algorithm.  
-
-Parameters -> score `dplib.math.in` :  
-- `$min` : minimum  
-- `$max` : maximum (not including)  
-
-Output -> score `dplib.math.out` :  
-- `$out` : output  
-
-Example code :  
-```mcfunction
-scoreboard players set $min dplib.math.in 0
-scoreboard players set $max dplib.math.in 64
-function dplib.math:tools/random_range_lcg
-scoreboard players operation baz mypack.bar = $out dplib.math.out
-```
-
-***
-
-### dplib.math:tools/**random_lcg**
-Returns a random number between `-2147483648` and `-2147483647` using the Linear Congruential Generator Algorithm.  
-
-Output -> score `dplib.math.out` :  
-- `$out` : output  
-
-Example code :  
-```mcfunction
-function dplib.math:tools/random_lcg
-scoreboard players operation baz mypack.bar = $out dplib.math.out
-```
-
-## Predicates
-### dplib.math:**random_binary**
-Has one in two chance of returning `true`.  
-
-```mcfunction
-execute if predicate dplib:random_binary run ...
 ```
 
 ***
